@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Automation-internship" />
-        <module name="airslate-automation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
