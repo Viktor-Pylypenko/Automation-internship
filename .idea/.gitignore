@@ -1,3 +1,9 @@
-# Default ignored files
-/shelf/
-/workspace.xml
+/*
+
+!src/
+!libs/
+!xmls/
+!pom.xml
+!README.md
+!.gitignore
+!testmodules
