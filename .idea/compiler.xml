@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Automation-internship" />
+        <module name="airslate-automation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="airslate-automation" target="1.5" />
+      <module name="airslate-automation" target="8" />
       <module name="Automation-internship" target="1.5" />
     </bytecodeTargetLevel>
   </component>
