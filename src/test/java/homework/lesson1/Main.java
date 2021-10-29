@@ -6,6 +6,6 @@ public class Main {
 
     @Test
     public void execute() {
-        System.out.println("test");
+        System.out.println("test_new");
     }
 }
