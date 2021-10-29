@@ -1,0 +1,3 @@
+# Automation-internship
+
+homework repository
