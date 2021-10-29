@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="change gitignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Automation-internship.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Automation-internship.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/lesson1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework/lesson1/Main.java" afterDir="false" />
+    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +63,42 @@
       <recent name="$PROJECT_DIR$/airslate-automation/src/test/java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.Main">
+    <configuration name="Main" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="airslate-automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework.lesson1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homework.lesson1" />
+      <option name="MAIN_CLASS_NAME" value="homework.lesson1.Main" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main.execute (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="airslate-automation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework.lesson1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homework.lesson1" />
+      <option name="MAIN_CLASS_NAME" value="homework.lesson1.Main" />
+      <option name="METHOD_NAME" value="execute" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main.execute" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Automation-internship" />
       <extension name="coverage">
@@ -86,6 +119,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Main" />
+        <item itemvalue="TestNG.Main.execute (1)" />
         <item itemvalue="TestNG.Main.execute" />
       </list>
     </recent_temporary>
@@ -155,7 +190,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635514539191</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="changes">
+      <created>1635516140592</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1635516140592</updated>
+    </task>
+    <task id="LOCAL-00010" summary="changes">
+      <created>1635516147562</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1635516147562</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +225,7 @@
     <MESSAGE value="some refactor" />
     <MESSAGE value="change dependencies" />
     <MESSAGE value="change gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="change gitignore" />
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
 </project>
