@@ -8,5 +8,4 @@ public class Main {
     public void execute() {
         System.out.println("test");
     }
-
 }
