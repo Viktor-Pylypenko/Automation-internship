@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="changes" />
+    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="test_changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +61,7 @@
       <recent name="$PROJECT_DIR$/airslate-automation/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Main">
+  <component name="RunManager" selected="TestNG.Main.execute (1)">
     <configuration name="Main" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
@@ -117,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Main" />
         <item itemvalue="TestNG.Main.execute (1)" />
+        <item itemvalue="TestNG.Main" />
         <item itemvalue="TestNG.Main.execute" />
       </list>
     </recent_temporary>
@@ -237,7 +237,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635516862801</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="changes">
+      <created>1635517027171</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1635517027171</updated>
+    </task>
+    <task id="LOCAL-00017" summary="test_changes">
+      <created>1635517230518</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1635517230518</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,6 +273,7 @@
     <MESSAGE value="change dependencies" />
     <MESSAGE value="change gitignore" />
     <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+    <MESSAGE value="test_changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="test_changes" />
   </component>
 </project>
