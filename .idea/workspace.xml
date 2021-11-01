@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="add_first_hw">
-      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lesson1/Second.java" afterDir="false" />
+    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="add_ second_hw">
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lesson1/Third.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lesson1/helpers/TypeConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/lesson1/helpers/ConsoleReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework/lesson1/helpers/ConsoleReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework/lesson1/First.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework/lesson1/First.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework/lesson1/Second.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework/lesson1/Second.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,7 @@
       <recent name="$PROJECT_DIR$/airslate-automation/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Second">
+  <component name="RunManager" selected="Application.Third">
     <configuration name="First" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homework.lesson1.First" />
       <module name="airslate-automation" />
@@ -92,7 +94,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="First" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Third" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lesson1.Third" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
@@ -100,16 +103,11 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="homework.lesson1" />
-      <option name="MAIN_CLASS_NAME" value="homework.lesson1.First" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="First.execute" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Three.execute (4)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
@@ -118,7 +116,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="homework.lesson1" />
-      <option name="MAIN_CLASS_NAME" value="homework.lesson1.First" />
+      <option name="MAIN_CLASS_NAME" value="homework.lesson1.Three" />
       <option name="METHOD_NAME" value="execute" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -127,7 +125,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main.execute (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Three.execute" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
@@ -136,7 +134,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="homework.lesson1" />
-      <option name="MAIN_CLASS_NAME" value="homework.lesson1.Main" />
+      <option name="MAIN_CLASS_NAME" value="homework.lesson1.Three" />
       <option name="METHOD_NAME" value="execute" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -147,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Third" />
         <item itemvalue="Application.Second" />
         <item itemvalue="Application.First" />
-        <item itemvalue="TestNG.First" />
-        <item itemvalue="TestNG.First.execute" />
-        <item itemvalue="TestNG.Main.execute (1)" />
+        <item itemvalue="TestNG.Three.execute" />
+        <item itemvalue="TestNG.Three.execute (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635725721039</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add_ second_hw">
+      <created>1635757958237</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1635757958237</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -321,6 +326,7 @@
     <MESSAGE value="changes" />
     <MESSAGE value="test_changes" />
     <MESSAGE value="add_first_hw" />
-    <option name="LAST_COMMIT_MESSAGE" value="add_first_hw" />
+    <MESSAGE value="add_ second_hw" />
+    <option name="LAST_COMMIT_MESSAGE" value="add_ second_hw" />
   </component>
 </project>

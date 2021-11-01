@@ -1,15 +1,15 @@
 package homework.lesson1;
 
-import homework.lesson1.helpers.ConsoleReader;
+import homework.lesson1.helpers.TypeConverter;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Second extends ConsoleReader {
+public class Second extends TypeConverter {
     public static void main(String[] args) throws IOException {
         System.out.println("\n" +
-                "Please enter an integer to convert it to char. " +
+                "Please enter an integer to convert it to the char. " +
                 "If you want to end the program press \"Enter\".");
 
         String s;
@@ -17,8 +17,7 @@ public class Second extends ConsoleReader {
             if (s.equals("")) {
                 break;
             } else {
-                int num = Integer.parseInt(s);
-                System.out.println("Символ введенного числа: " + ((char) num));
+                System.out.println("Символ введенного числа: " + castIntToChar(s));
             }
         }
     }
