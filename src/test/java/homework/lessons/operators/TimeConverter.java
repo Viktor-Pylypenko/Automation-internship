@@ -12,7 +12,7 @@ public class TimeConverter extends ConsoleReader {
 
     public static void main(String[] args) throws IOException {
 
-        System.out.println("\nPlease enter the required number of minutes to convert in to years and days.");
+        System.out.println("\nPlease enter the required number of minutes to convert it to years and days.");
         minuteConverter(getConsoleInteger(new BufferedReader(new InputStreamReader(System.in))));
 
     }
