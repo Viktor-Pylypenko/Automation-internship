@@ -9,8 +9,4 @@ public class ConsoleReader {
         return bufferedReader.readLine();
     }
 
-    public static int getConsoleInteger(BufferedReader bufferedReader) throws IOException {
-        return Integer.parseInt(bufferedReader.readLine());
-    }
-
 }
