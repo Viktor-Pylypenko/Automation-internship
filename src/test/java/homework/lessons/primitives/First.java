@@ -1,6 +1,6 @@
-package homework.lesson1;
+package homework.lessons.primitives;
 
-import homework.lesson1.helpers.TypeConverter;
+import homework.helpers.TypeConverter;
 
 import java.io.BufferedReader;
 import java.io.IOException;

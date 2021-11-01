@@ -1,4 +1,4 @@
-package homework.lesson1.helpers;
+package homework.helpers;
 
 public class TypeConverter extends ConsoleReader {
 
