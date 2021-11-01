@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="add_third_task">
+    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="change_folder_structure">
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/operators/TimeConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/lesson1/First.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/primitives/First.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/lesson1/Second.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/primitives/Second.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/lesson1/Third.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/primitives/Third.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/lesson1/helpers/ConsoleReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework/helpers/ConsoleReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/lesson1/helpers/TypeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework/helpers/TypeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework/helpers/ConsoleReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework/helpers/ConsoleReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +65,7 @@
       <recent name="$PROJECT_DIR$/airslate-automation/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.First (1)">
+  <component name="RunManager" selected="Application.TimeConverter">
     <configuration name="First (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homework.lessons.primitives.First" />
       <module name="airslate-automation" />
@@ -121,31 +118,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Three.execute" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TimeConverter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.TimeConverter" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.primitives.*" />
+          <option name="PATTERN" value="homework.lessons.operators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="homework.lesson1" />
-      <option name="MAIN_CLASS_NAME" value="homework.lesson1.Three" />
-      <option name="METHOD_NAME" value="execute" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TimeConverter" />
         <item itemvalue="Application.First (1)" />
         <item itemvalue="Application.First" />
         <item itemvalue="Application.Third" />
         <item itemvalue="Application.Second" />
-        <item itemvalue="TestNG.Three.execute" />
       </list>
     </recent_temporary>
   </component>
@@ -305,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635801831374</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="change_folder_structure">
+      <created>1635802274129</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1635802274129</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -331,6 +330,7 @@
     <MESSAGE value="add_first_hw" />
     <MESSAGE value="add_ second_hw" />
     <MESSAGE value="add_third_task" />
-    <option name="LAST_COMMIT_MESSAGE" value="add_third_task" />
+    <MESSAGE value="change_folder_structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="change_folder_structure" />
   </component>
 </project>
