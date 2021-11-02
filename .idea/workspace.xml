@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="fix_letter">
-      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/operators/PrintTime.java" afterDir="false" />
+    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="print_time">
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/helpers/MathOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/operators/IntComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +65,7 @@
       <recent name="$PROJECT_DIR$/airslate-automation/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PrintTime">
+  <component name="RunManager" selected="Application.IntComparator">
     <configuration name="First (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homework.lessons.primitives.First" />
       <module name="airslate-automation" />
@@ -91,8 +92,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.PrintTime" />
+    <configuration name="IntComparator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.IntComparator" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
@@ -104,12 +105,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Third" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.primitives.Third" />
+    <configuration name="PrintTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.PrintTime" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.primitives.*" />
+          <option name="PATTERN" value="homework.lessons.operators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.IntComparator" />
         <item itemvalue="Application.PrintTime" />
         <item itemvalue="Application.TimeConverter" />
         <item itemvalue="Application.First (1)" />
         <item itemvalue="Application.First" />
-        <item itemvalue="Application.Third" />
       </list>
     </recent_temporary>
   </component>
@@ -317,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635807495211</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="print_time">
+      <created>1635812150221</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1635812150221</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -346,6 +354,7 @@
     <MESSAGE value="change_folder_structure" />
     <MESSAGE value="add_time_converter" />
     <MESSAGE value="fix_letter" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix_letter" />
+    <MESSAGE value="print_time" />
+    <option name="LAST_COMMIT_MESSAGE" value="print_time" />
   </component>
 </project>
