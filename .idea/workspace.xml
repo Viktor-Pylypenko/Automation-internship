@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="change_folder_structure">
-      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/operators/TimeConverter.java" afterDir="false" />
+    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="fix_letter">
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/operators/PrintTime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/homework/helpers/ConsoleReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework/helpers/ConsoleReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,7 @@
       <recent name="$PROJECT_DIR$/airslate-automation/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TimeConverter">
+  <component name="RunManager" selected="Application.PrintTime">
     <configuration name="First (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homework.lessons.primitives.First" />
       <module name="airslate-automation" />
@@ -92,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Second" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.primitives.Second" />
+    <configuration name="PrintTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.PrintTime" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.primitives.*" />
+          <option name="PATTERN" value="homework.lessons.operators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PrintTime" />
         <item itemvalue="Application.TimeConverter" />
         <item itemvalue="Application.First (1)" />
         <item itemvalue="Application.First" />
         <item itemvalue="Application.Third" />
-        <item itemvalue="Application.Second" />
       </list>
     </recent_temporary>
   </component>
@@ -304,7 +303,21 @@
       <option name="project" value="LOCAL" />
       <updated>1635802274129</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add_time_converter">
+      <created>1635807438116</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1635807438116</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fix_letter">
+      <created>1635807495211</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1635807495211</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -331,6 +344,8 @@
     <MESSAGE value="add_ second_hw" />
     <MESSAGE value="add_third_task" />
     <MESSAGE value="change_folder_structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="change_folder_structure" />
+    <MESSAGE value="add_time_converter" />
+    <MESSAGE value="fix_letter" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix_letter" />
   </component>
 </project>
