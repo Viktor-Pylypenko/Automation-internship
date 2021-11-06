@@ -72,11 +72,5 @@ public class Autoboxing extends ConsoleReader {
             System.out.println("The field cannot be empty! Try again");
         }
 
-
-
-
-
-
-
     }
 }
