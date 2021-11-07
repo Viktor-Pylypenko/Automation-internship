@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="print_time">
-      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/variables/shading/ShadingChild.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/variables/shading/ShadingGeneral.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/variables/shading/ShadingParent.java" afterDir="false" />
+    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="add_shading">
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/variables/Initialization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,101 +64,79 @@
       <recent name="$PROJECT_DIR$/airslate-automation/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ShadingChild.execute">
-    <configuration name="ShadingChild" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Declarev">
+    <configuration name="Declarev" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.Declarev" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.variables.shading.*" />
+          <option name="PATTERN" value="homework.lessons.variables.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="homework.lessons.variables.shading" />
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.shading.ShadingChild" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShadingChild.execute" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="First (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.primitives.First" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.variables.shading.*" />
+          <option name="PATTERN" value="homework.lessons.primitives.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="homework.lessons.variables.shading" />
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.shading.ShadingChild" />
-      <option name="METHOD_NAME" value="execute" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShadingGeneral" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="IntComparator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.IntComparator" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.variables.shading.*" />
+          <option name="PATTERN" value="homework.lessons.operators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="homework.lessons.variables.shading" />
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.shading.ShadingGeneral" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShadingGeneral.execute" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PrintTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.PrintTime" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.variables.shading.*" />
+          <option name="PATTERN" value="homework.lessons.operators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="homework.lessons.variables.shading" />
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.shading.ShadingGeneral" />
-      <option name="METHOD_NAME" value="execute" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShadingParent" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TimeConverter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.TimeConverter" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.variables.shading.*" />
+          <option name="PATTERN" value="homework.lessons.operators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="homework.lessons.variables.shading" />
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.shading.ShadingParent" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ShadingChild.execute" />
-        <item itemvalue="TestNG.ShadingChild" />
-        <item itemvalue="TestNG.ShadingParent" />
-        <item itemvalue="TestNG.ShadingGeneral.execute" />
-        <item itemvalue="TestNG.ShadingGeneral" />
+        <item itemvalue="Application.Declarev" />
+        <item itemvalue="Application.IntComparator" />
+        <item itemvalue="Application.PrintTime" />
+        <item itemvalue="Application.TimeConverter" />
+        <item itemvalue="Application.First (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -348,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635812150221</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add_declare_variables_hw">
+      <created>1636292233365</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1636292233365</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,6 +361,7 @@
     <MESSAGE value="add_time_converter" />
     <MESSAGE value="fix_letter" />
     <MESSAGE value="print_time" />
-    <option name="LAST_COMMIT_MESSAGE" value="print_time" />
+    <MESSAGE value="add_declare_variables_hw" />
+    <option name="LAST_COMMIT_MESSAGE" value="add_declare_variables_hw" />
   </component>
 </project>
