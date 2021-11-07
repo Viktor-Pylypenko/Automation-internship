@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="print_time">
-      <change afterPath="$PROJECT_DIR$/src/test/java/homework/helpers/MathOperations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/operators/IntComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/variables/shading/ShadingChild.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/variables/shading/ShadingGeneral.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/variables/shading/ShadingParent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,79 +66,101 @@
       <recent name="$PROJECT_DIR$/airslate-automation/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.IntComparator">
-    <configuration name="First (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.primitives.First" />
+  <component name="RunManager" selected="TestNG.ShadingChild.execute">
+    <configuration name="ShadingChild" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.primitives.*" />
+          <option name="PATTERN" value="homework.lessons.variables.shading.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="homework.lessons.variables.shading" />
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.shading.ShadingChild" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="First" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.primitives.First" />
+    <configuration name="ShadingChild.execute" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.primitives.*" />
+          <option name="PATTERN" value="homework.lessons.variables.shading.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="homework.lessons.variables.shading" />
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.shading.ShadingChild" />
+      <option name="METHOD_NAME" value="execute" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntComparator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.IntComparator" />
+    <configuration name="ShadingGeneral" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.operators.*" />
+          <option name="PATTERN" value="homework.lessons.variables.shading.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="homework.lessons.variables.shading" />
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.shading.ShadingGeneral" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.PrintTime" />
+    <configuration name="ShadingGeneral.execute" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.operators.*" />
+          <option name="PATTERN" value="homework.lessons.variables.shading.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="homework.lessons.variables.shading" />
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.shading.ShadingGeneral" />
+      <option name="METHOD_NAME" value="execute" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimeConverter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.TimeConverter" />
+    <configuration name="ShadingParent" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.operators.*" />
+          <option name="PATTERN" value="homework.lessons.variables.shading.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="homework.lessons.variables.shading" />
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.shading.ShadingParent" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.IntComparator" />
-        <item itemvalue="Application.PrintTime" />
-        <item itemvalue="Application.TimeConverter" />
-        <item itemvalue="Application.First (1)" />
-        <item itemvalue="Application.First" />
+        <item itemvalue="TestNG.ShadingChild.execute" />
+        <item itemvalue="TestNG.ShadingChild" />
+        <item itemvalue="TestNG.ShadingParent" />
+        <item itemvalue="TestNG.ShadingGeneral.execute" />
+        <item itemvalue="TestNG.ShadingGeneral" />
       </list>
     </recent_temporary>
   </component>
