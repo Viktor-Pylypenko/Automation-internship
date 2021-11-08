@@ -10,12 +10,9 @@ public class ShadingChild extends ShadingParent {
 
     @Test
     public void execute() {
-        this.showName();
-        super.showName();
-        shadingGeneral.showName();
+        System.out.println(this.folderName);
+        System.out.println(super.folderName);
+        System.out.println(shadingGeneral.folderName);
     }
 
-    public void showName() {
-        System.out.println(folderName);
-    }
 }
