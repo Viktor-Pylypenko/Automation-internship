@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="add_shading">
-      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/variables/Initialization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="add_initialization" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -331,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636292233365</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add_initialization">
+      <created>1636328952699</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1636328952699</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -362,6 +366,7 @@
     <MESSAGE value="fix_letter" />
     <MESSAGE value="print_time" />
     <MESSAGE value="add_declare_variables_hw" />
-    <option name="LAST_COMMIT_MESSAGE" value="add_declare_variables_hw" />
+    <MESSAGE value="add_initialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="add_initialization" />
   </component>
 </project>
