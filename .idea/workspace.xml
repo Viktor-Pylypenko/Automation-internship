@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="add_declare_variables_hw">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/core/BrowserFactory.java" afterDir="false" />
+    <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="workspace_file">
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/methods/task1/VarargOverload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/methods/task2/oldphones/OldPhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/methods/task2/smartphones/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/methods/task2/smartphones/SmartPhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/methods/task3/Counter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/methods/task3/FirstTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/methods/task3/SecondTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/methods/task4/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -65,13 +72,13 @@
       <recent name="$PROJECT_DIR$/airslate-automation/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Declarev">
-    <configuration name="Declarev" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.Declarev" />
+  <component name="RunManager" selected="Application.Dog">
+    <configuration name="Dog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.methods.task4.Dog" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.variables.*" />
+          <option name="PATTERN" value="homework.lessons.methods.task4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,12 +86,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="First (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.primitives.First" />
+    <configuration name="FirstTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.methods.task3.FirstTest" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.primitives.*" />
+          <option name="PATTERN" value="homework.lessons.methods.task3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,12 +99,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntComparator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.IntComparator" />
+    <configuration name="SecondTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.methods.task3.SecondTest" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.operators.*" />
+          <option name="PATTERN" value="homework.lessons.methods.task3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,12 +112,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.PrintTime" />
+    <configuration name="VarargOverload" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.methods.task1.VarargOverload" />
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.operators.*" />
+          <option name="PATTERN" value="homework.lessons.methods.task1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,26 +125,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimeConverter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.TimeConverter" />
+    <configuration name="VarargOverload.execute" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.operators.*" />
+          <option name="PATTERN" value="homework.lessons.methods.task1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="homework.lessons.methods.task1" />
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.methods.task1.VarargOverload" />
+      <option name="METHOD_NAME" value="execute" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Declarev" />
-        <item itemvalue="Application.IntComparator" />
-        <item itemvalue="Application.PrintTime" />
-        <item itemvalue="Application.TimeConverter" />
-        <item itemvalue="Application.First (1)" />
+        <item itemvalue="Application.Dog" />
+        <item itemvalue="Application.SecondTest" />
+        <item itemvalue="Application.FirstTest" />
+        <item itemvalue="TestNG.VarargOverload.execute" />
+        <item itemvalue="Application.VarargOverload" />
       </list>
     </recent_temporary>
   </component>
