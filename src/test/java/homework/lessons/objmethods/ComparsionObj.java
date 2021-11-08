@@ -28,12 +28,12 @@ public class ComparsionObj {
 
     @Test
     public void execute() {
-        ComparsionObj comparsionObj = new ComparsionObj("Oleg");
-        System.out.println(comparsionObj);
-        ComparsionObj comparsionObj1 = new ComparsionObj("Olef");
-        System.out.println(comparsionObj1);
+        ComparsionObj comparsionObj = new ComparsionObj("Oleg", 21);
+        ComparsionObj comparsionObj1 = new ComparsionObj("Oleg", 21);
+        ComparsionObj comparsionObj2 = new ComparsionObj("Oleg", 23);
 
-        System.out.println(comparsionObj.equals(comparsionObj1));
+        System.out.println(comparsionObj.equals(comparsionObj1)); //true
+        System.out.println(comparsionObj.equals(comparsionObj2)); //false
     }
 
     @Override
@@ -41,12 +41,12 @@ public class ComparsionObj {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ComparsionObj that = (ComparsionObj) o;
-        if (s!=null) {
-            return s.equals(that.s);
-        } else if (s != null && i != null) {
+        if (l != null && i != null) {
+            return s.equals(that.s) && i.equals(that.i) && l.equals(that.l);
+        } else if (i != null) {
             return s.equals(that.s) && i.equals(that.i);
         } else {
-            return s.equals(that.s) && i.equals(that.i) && l.equals(that.l);
+            return s.equals(that.s);
         }
     }
 
@@ -57,12 +57,12 @@ public class ComparsionObj {
 
     @Override
     public String toString() {
-        if (s != null) {
-            return s;
-        } else if (s != null && i != null) {
+        if (l != null && i != null) {
+            return s + " " + i + " " + l;
+        } else if (i != null) {
             return s + " " + i;
         } else {
-            return s + " " + i + " " + l;
+            return s;
         }
     }
 }
