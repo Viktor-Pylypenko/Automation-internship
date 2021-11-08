@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95f774f8-72d1-42a6-95c1-191971db1151" name="Changes" comment="add_declare_variables_hw">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/core/BrowserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/homework/lessons/objmethods/ComparsionObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,79 +65,102 @@
       <recent name="$PROJECT_DIR$/airslate-automation/src/test/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Declarev">
-    <configuration name="Declarev" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.variables.Declarev" />
+  <component name="RunManager" selected="TestNG.ComparsionObj.execute">
+    <configuration name="ComparsionObj (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.variables.*" />
+          <option name="PATTERN" value="homework.lessons.objmethods.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="homework.lessons.objmethods" />
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.objmethods.ComparsionObj" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="First (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.primitives.First" />
+    <configuration name="ComparsionObj (2)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.primitives.*" />
+          <option name="PATTERN" value="homework.lessons.objmethods.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="homework.lessons.objmethods" />
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.objmethods.ComparsionObj" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntComparator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.IntComparator" />
+    <configuration name="ComparsionObj.execute (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.operators.*" />
+          <option name="PATTERN" value="homework.lessons.objmethods.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="homework.lessons.objmethods" />
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.objmethods.ComparsionObj" />
+      <option name="METHOD_NAME" value="execute" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.PrintTime" />
+    <configuration name="ComparsionObj.execute (2)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.operators.*" />
+          <option name="PATTERN" value="homework.lessons.objmethods.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="homework.lessons.objmethods" />
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.objmethods.ComparsionObj" />
+      <option name="METHOD_NAME" value="execute" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimeConverter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.lessons.operators.TimeConverter" />
+    <configuration name="ComparsionObj.execute" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="airslate-automation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.lessons.operators.*" />
+          <option name="PATTERN" value="homework.lessons.objmethods.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="homework.lessons.objmethods" />
+      <option name="MAIN_CLASS_NAME" value="homework.lessons.objmethods.ComparsionObj" />
+      <option name="METHOD_NAME" value="execute" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Declarev" />
-        <item itemvalue="Application.IntComparator" />
-        <item itemvalue="Application.PrintTime" />
-        <item itemvalue="Application.TimeConverter" />
-        <item itemvalue="Application.First (1)" />
+        <item itemvalue="TestNG.ComparsionObj.execute" />
+        <item itemvalue="TestNG.ComparsionObj (2)" />
+        <item itemvalue="TestNG.ComparsionObj.execute (2)" />
+        <item itemvalue="TestNG.ComparsionObj (1)" />
+        <item itemvalue="TestNG.ComparsionObj.execute (1)" />
       </list>
     </recent_temporary>
   </component>
