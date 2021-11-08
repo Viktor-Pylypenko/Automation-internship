@@ -11,8 +11,6 @@ public class ComparsionObj {
     Integer i;
     List l;
 
-    ComparsionObj() {}
-
     ComparsionObj(String s) {
         this.s = s;
     }
