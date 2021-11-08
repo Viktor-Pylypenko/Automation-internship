@@ -12,7 +12,7 @@ public class VarargOverload {
     }
 
     public void say(String username) {
-        System.out.println("Hi" + username);
+        System.out.println("Hi " + username);
     }
 
     public void say(String ...names) {
