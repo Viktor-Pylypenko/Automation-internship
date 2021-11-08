@@ -1,6 +1,6 @@
 package homework.lessons.constructors;
 
-public class Iphone {
+public class Iphone extends Smartphone {
     String version;
 
     public Iphone() {
