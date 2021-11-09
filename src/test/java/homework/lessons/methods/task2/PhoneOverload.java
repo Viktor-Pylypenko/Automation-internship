@@ -37,7 +37,7 @@ public class PhoneOverload {
         }
     }
 
-    static class Xiaomi extends PhoneOverload {
+    class Xiaomi extends PhoneOverload {
         //Переопределенный метод возвращает исключение
         @Override
         public Integer testMethod(String stringArg) {
