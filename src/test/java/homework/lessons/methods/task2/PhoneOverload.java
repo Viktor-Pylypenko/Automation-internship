@@ -1,8 +1,7 @@
 package homework.lessons.methods.task2;
 
-import org.openqa.selenium.By;
-
 public class PhoneOverload {
+
     protected Number testMethod(String stringArg) throws Exception {
         return Integer.parseInt(stringArg);
     }
@@ -17,7 +16,7 @@ public class PhoneOverload {
 
     class Nokia extends PhoneOverload {
         //Без использования аннотации Override, более узким исключением, другим типов возвращаемого значения
-        protected Number testMethod(String stringArg) throws NumberFormatException {
+        protected Byte testMethod(String stringArg) throws NumberFormatException {
             return Byte.parseByte(stringArg);
         }
     }
@@ -27,6 +26,22 @@ public class PhoneOverload {
         @Override
         protected Number testMethod(String stringArg) throws Exception {
             return super.testMethod(stringArg);
+        }
+    }
+
+    class Huawei extends PhoneOverload {
+        //Переопределенный метод не пробрасывает исключение
+        @Override
+        public Integer testMethod(String stringArg) {
+            return Integer.parseInt(stringArg);
+        }
+    }
+
+    static class Xiaomi extends PhoneOverload {
+        //Переопределенный метод возвращает исключение
+        @Override
+        public Integer testMethod(String stringArg) {
+            throw new RuntimeException();
         }
     }
 }
