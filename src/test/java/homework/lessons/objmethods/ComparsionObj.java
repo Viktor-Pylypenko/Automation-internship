@@ -3,6 +3,7 @@ package homework.lessons.objmethods;
 import org.testng.annotations.Test;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class ComparsionObj {
@@ -28,12 +29,19 @@ public class ComparsionObj {
 
     @Test
     public void execute() {
-        ComparsionObj comparsionObj = new ComparsionObj("Oleg", 21);
-        ComparsionObj comparsionObj1 = new ComparsionObj("Oleg", 21);
-        ComparsionObj comparsionObj2 = new ComparsionObj("Oleg", 23);
 
-        System.out.println(comparsionObj.equals(comparsionObj1)); //true
-        System.out.println(comparsionObj.equals(comparsionObj2)); //false
+    }
+
+    public void printString() {
+        System.out.println("String s: " + this.s);
+    }
+
+    public void printStringInteger() {
+        System.out.println("String s: " + this.s + "\nInteger i: " + this.i);
+    }
+
+    public void printStringIntegerList() {
+        System.out.println("String s: " + this.s + "\nInteger i: " + this.i + "\nList l: " + this.l);
     }
 
     @Override
@@ -41,28 +49,26 @@ public class ComparsionObj {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ComparsionObj that = (ComparsionObj) o;
-        if (l != null && i != null) {
-            return s.equals(that.s) && i.equals(that.i) && l.equals(that.l);
-        } else if (i != null) {
-            return s.equals(that.s) && i.equals(that.i);
-        } else {
-            return s.equals(that.s);
-        }
+        return s.equals(that.s);
+    }
+
+    public boolean equalsTwoArgs(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ComparsionObj that = (ComparsionObj) o;
+        return s.equals(that.s) && Objects.equals(i, that.i);
+    }
+
+
+    public boolean equalsThreeArgs(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ComparsionObj that = (ComparsionObj) o;
+        return s.equals(that.s) && Objects.equals(i, that.i) && Objects.equals(l, that.l);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(s, i, l);
-    }
-
-    @Override
-    public String toString() {
-        if (l != null && i != null) {
-            return s + " " + i + " " + l;
-        } else if (i != null) {
-            return s + " " + i;
-        } else {
-            return s;
-        }
+        return Objects.hash(s);
     }
 }
