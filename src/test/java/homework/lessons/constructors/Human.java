@@ -12,13 +12,12 @@ public class Human {
     }
 
     public Human(String race, Integer height) {
-        this.race = race;
+        this(race);
         this.height = height;
     }
 
     public Human(String race, Integer height, List family) {
-        this.race = race;
-        this.height = height;
+        this(race, height);
         this.family = family;
     }
 }
@@ -27,11 +26,11 @@ class Man extends Human {
     String weight;
 
     Man() {
-        super(null);
+        super("Test");
     }
 
     Man(String weight) {
-        super(null);
+        super("Test");
         this.weight = weight;
     }
 
