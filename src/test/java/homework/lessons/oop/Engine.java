@@ -1,9 +1,14 @@
-package homework.lessons.oop.task1;
+package homework.lessons.oop;
 
 public class Engine {
 
     private int power;
     private String company;
+
+    Engine(int power, String company) {
+        this.power = power;
+        this.company = company;
+    }
 
     void run() {
         System.out.println("Engine is started!");

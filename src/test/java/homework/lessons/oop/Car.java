@@ -1,25 +1,31 @@
-package homework.lessons.oop.task1;
+package homework.lessons.oop;
 
 public class Car {
     private String carClass;
     private String marka;
-    private final Engine ENGINE = new Engine();
-    private final Driver DRIVER = new Driver();
+
+    Car(String carClass, String marka) {
+        this.carClass = carClass;
+        this.marka = marka;
+    }
+
+    private Engine engine = new Engine(247, "Mercedes");
+    private Driver driver = new Driver(30);
 
     public void start() {
-        ENGINE.run();
+        engine.run();
     }
 
     public void stop() {
-        ENGINE.off();
+        engine.off();
     }
 
     public void turnRight() {
-        DRIVER.wheelRight();
+        driver.wheelRight();
     }
 
     public void turnLeft() {
-        DRIVER.wheelLeft();
+        driver.wheelLeft();
     }
 
     @Override
@@ -29,7 +35,13 @@ public class Car {
 }
 
 class SportCar extends Car {
+
     private double speed;
+
+    SportCar(double speed) {
+        super("S", "BMW");
+        this.speed = speed;
+    }
 
     @Override
     public String toString() {
@@ -38,7 +50,11 @@ class SportCar extends Car {
 }
 
 class Lorry extends Car {
+
     private int carrying;
+    Lorry(int carrying) {
+        super("RST", "Isuzu");
+    }
 
     @Override
     public String toString() {
