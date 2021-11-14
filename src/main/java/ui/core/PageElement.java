@@ -2,11 +2,11 @@ package ui.core;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.time.Duration;
 
-import static ui.core.BrowserFactory.driver;
 import static ui.core.BrowserFactory.getWebDriverWait;
 
 public class PageElement {
@@ -23,13 +23,17 @@ public class PageElement {
         this.name = name;
     }
 
+    public WebElement findPageElement() {
+        return getWebDriverWait(Duration.ofSeconds(10)).until(ExpectedConditions.presenceOfElementLocated(by));
+    }
+
     public void click() {
-        driver().findElement(by).click();
+        findPageElement().click();
     }
 
     public void type(String text) {
-        driver().findElement(by).clear();
-        driver().findElement(by).sendKeys(text);
+        findPageElement().clear();
+        findPageElement().sendKeys(text);
     }
 
     public boolean isElementPresent() {
