@@ -1,7 +1,5 @@
 package homework.lessons.oop;
 
-import java.util.Random;
-
 public class Person {
 
     private int age;
@@ -30,8 +28,6 @@ public class Person {
 
 class Driver extends Person {
 
-
-
     private int experienceYear;
     private boolean license;
     private int licenseNumber;
@@ -42,6 +38,5 @@ class Driver extends Person {
         this.license = license;
         this.licenseNumber = licenseNumber;
     }
-
 
 }
