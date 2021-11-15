@@ -1,16 +1,14 @@
 package homework.lessons.oop;
 
 public class Wheel {
-    void wheelRight() {
-        System.out.println("the steering wheel is turned to the right");
-    }
+    private String rubberType;
+    private String verticalPosition;
+    private String horizontalPosition;
 
-    void wheelLeft() {
-        System.out.println("the steering wheel is turned to the left");
-    }
-
-    void signal() {
-        System.out.println("BBBEEEEEEEEP!");
+    Wheel(String rubberType, String verticalPosition, String horizontalPosition) {
+        this.rubberType = rubberType;
+        this.verticalPosition = verticalPosition;
+        this.horizontalPosition = horizontalPosition;
     }
 
 }

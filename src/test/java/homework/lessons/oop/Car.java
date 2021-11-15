@@ -1,17 +1,20 @@
 package homework.lessons.oop;
 
+import java.util.Set;
+
 public class Car {
     private String name;
-    Driver driver;
-    Engine engine;
-    SportEngine sportEngine;
-    Wheel wheel;
+    private Driver driver;
+    private Engine engine;
+    private SteeringWheel steeringWheel;
+    private Set<Wheel> wheelSet;
 
-    Car(String name, Driver driver, Engine engine, Wheel wheel) {
+    public Car(String name, Driver driver, Engine engine, SteeringWheel steeringWheel, Set<Wheel> wheelSet) {
         this.name = name;
         this.driver = driver;
         this.engine = engine;
-        this.wheel = wheel;
+        this.steeringWheel = steeringWheel;
+        this.wheelSet = wheelSet;
     }
 
     public void startCar() {
@@ -28,13 +31,13 @@ public class Car {
     }
 
     public void turnRight() {
-        wheel.wheelRight();
+        steeringWheel.wheelRight();
     }
-    public void turnleft() {
-        wheel.wheelLeft();
+    public void turnLeft() {
+        steeringWheel.wheelLeft();
     }
     public void signal() {
-        wheel.signal();
+        steeringWheel.signal();
     }
     public void gas() {
         System.out.println("Add gas!");
@@ -50,12 +53,10 @@ public class Car {
 class SportCar extends Car {
 
     private int speed;
-    private int carryingCapacity;
 
-    SportCar(String model, Driver driver, Engine engine, Wheel wheel, int speed, int carryingCapacity) {
-        super(model, driver, engine, wheel);
+    SportCar(String model, Driver driver, Engine engine, SteeringWheel steeringWheel, Set<Wheel> wheelSet,int speed) {
+        super(model, driver, engine, steeringWheel, wheelSet);
         this.speed = speed;
-        this.carryingCapacity = carryingCapacity;
     }
 
     @Override
@@ -67,12 +68,10 @@ class SportCar extends Car {
 
 class Lorry extends Car {
 
-    private int speed;
     private int carryingCapacity;
 
-    Lorry(String model, Driver driver, Engine engine, Wheel wheel, int speed, int carryingCapacity) {
-        super(model, driver, engine, wheel);
-        this.speed = speed;
+    Lorry(String model, Driver driver, Engine engine, SteeringWheel steeringWheel, Set<Wheel> wheelSet, int carryingCapacity) {
+        super(model, driver, engine, steeringWheel, wheelSet);
         this.carryingCapacity = carryingCapacity;
     }
 

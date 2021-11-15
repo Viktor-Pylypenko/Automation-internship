@@ -5,13 +5,15 @@ import homework.helpers.ConsoleReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Set;
 
 public class TestDrive extends ConsoleReader {
+
+    public static Car car;
+
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        Car car = null;
 
         while (true) {
             System.out.println("Please enter model of your car: ");
@@ -60,36 +62,43 @@ public class TestDrive extends ConsoleReader {
                 regularEngine = new RegularEngine(carPower, carFuelCompulsion);
             }
 
-
             int speed;
             int carryingCapacity;
             if (carType.equals("Sport")) {
 
                 System.out.println("Please enter maximum speed: ");
                 speed = getConsoleInteger(br);
-                System.out.println("Please enter carrying capacity: ");
-                carryingCapacity = getConsoleInteger(br);
 
                 car = new SportCar(
                         carModel,
-                        new Driver(driverAge, driverName, driverExperience, haveLicense, driverLicenseNumber),
+                        new SportDriver(driverAge, driverName, driverExperience, haveLicense, driverLicenseNumber),
                         sportEngine,
-                        new Wheel(),
-                        speed,
-                        carryingCapacity
+                        new SteeringWheel(),
+                        Set.of(
+                                new Wheel("Summer", "Top", "Left"),
+                                new Wheel("Summer", "Top", "Right"),
+                                new Wheel("Summer", "Bottom", "Left"),
+                                new Wheel("Summer", "Bottom", "Right")
+                        ),
+                        speed
                 );
             } else {
-                System.out.println("Please enter maximum speed: ");
-                speed = getConsoleInteger(br);
                 System.out.println("Please enter carrying capacity: ");
                 carryingCapacity = getConsoleInteger(br);
 
                 car = new Lorry(
                         carModel,
-                        new Driver(driverAge, driverName, driverExperience, haveLicense, driverLicenseNumber),
+                        new LorryDriver(driverAge, driverName, driverExperience, haveLicense, driverLicenseNumber),
                         regularEngine,
-                        new Wheel(),
-                        speed,
+                        new SteeringWheel(),
+                        Set.of(
+                                new Wheel("Winter", "Top", "Left"),
+                                new Wheel("Winter", "Top", "Right"),
+                                new Wheel("Winter", "Bottom", "First Left"),
+                                new Wheel("Winter", "Bottom", "Second Left"),
+                                new Wheel("Winter", "Bottom", "First Right"),
+                                new Wheel("Winter", "Bottom", "Second Right")
+                        ),
                         carryingCapacity
                 );
             }
@@ -104,29 +113,36 @@ public class TestDrive extends ConsoleReader {
             while (!(command = br.readLine()).equals("start")) {
                 System.out.println("Incorrect command " + command);
             }
+            car.startCar();
 
-            while (true) {
+            boolean loopIsAlive = true;
+
+            while (loopIsAlive) {
 
                 System.out.println("Choose command gas, left, right, signal to drive the car or '' to stop");
                 command = br.readLine();
 
-                if (command.equals("start")) {
-                    car.startCar();
-                } else if (command.equals("right")) {
-                    car.turnRight();
-                } else if (command.equals("left")) {
-                    car.turnleft();
-                } else if (command.equals("signal")) {
-                    car.signal();
-                } else if (command.equals("gas")) {
-                    car.gas();
-                } else if (command.equals("")) {
-                    car.stopCar();
-                    break;
+                switch (command) {
+                    case "gas":
+                        car.gas();
+                        break;
+                    case "right":
+                        car.turnRight();
+                        break;
+                    case "left":
+                        car.turnLeft();
+                        break;
+                    case "signal":
+                        car.signal();
+                        break;
+                    case "":
+                        car.stopCar();
+                        loopIsAlive = false;
+                        break;
+                    default:
+                        System.out.println("Unknown command");
                 }
-
             }
         }
-
     }
 }
