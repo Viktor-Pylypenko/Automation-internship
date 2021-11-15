@@ -1,64 +1,55 @@
 package homework.lessons.oop;
 
 public class Car {
-    private String carClass;
-    private String marka;
+    private String name;
+    private String colour;
+    Person driver;
+    Engine engine;
+    Wheel wheel;
 
-    Car(String carClass, String marka) {
-        this.carClass = carClass;
-        this.marka = marka;
+    Car(String name, String colour, Person driver, Engine engine, Wheel wheel) {
+        this.name = name;
+        this.colour = colour;
+        this.driver = driver;
+        this.engine = engine;
+        this.wheel = wheel;
     }
 
-    private Engine engine = new Engine(247, "Mercedes");
-    private Driver driver = new Driver(30);
-
-    public void start() {
-        engine.run();
-    }
-
-    public void stop() {
-        engine.off();
-    }
-
-    public void turnRight() {
-        driver.wheelRight();
-    }
-
-    public void turnLeft() {
-        driver.wheelLeft();
+    public void gas() {
+        System.out.println("The " + name + " goes faster");
     }
 
     @Override
     public String toString() {
-        return Car.class.getSimpleName();
+        return "You have an incredible " + getClass().getSimpleName() + " " + name + " with professional driver: " + driver;
     }
 }
 
 class SportCar extends Car {
 
-    private double speed;
+    private int speed;
+    private int carryingCapacity;
 
-    SportCar(double speed) {
-        super("S", "BMW");
+    SportCar(String model, String colour, Driver driver, Engine engine, Wheel wheel, int speed, int carryingCapacity) {
+        super(model, colour, driver, engine, wheel);
         this.speed = speed;
+        this.carryingCapacity = carryingCapacity;
+
     }
 
-    @Override
-    public String toString() {
-        return SportCar.class.getSimpleName();
-    }
 }
 
 class Lorry extends Car {
 
-    private int carrying;
-    Lorry(int carrying) {
-        super("RST", "Isuzu");
+    private int speed;
+    private int carryingCapacity;
+
+    Lorry(String model, String colour, Driver driver, Engine engine, Wheel wheel, int speed, int carryingCapacity) {
+        super(model, colour, driver, engine, wheel);
+        this.speed = speed;
+        this.carryingCapacity = carryingCapacity;
     }
 
-    @Override
-    public String toString() {
-        return Lorry.class.getSimpleName();
-    }
+
 }
 
