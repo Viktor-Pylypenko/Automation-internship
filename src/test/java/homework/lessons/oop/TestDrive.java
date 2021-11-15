@@ -17,9 +17,6 @@ public class TestDrive extends ConsoleReader {
             System.out.println("Please enter model of your car: ");
             String carModel = getConsoleString(br);
 
-            System.out.println("Please enter colour of your car: ");
-            String carColour = getConsoleString(br);
-
             System.out.println("Please enter driver's age: ");
             int driverAge;
             if ((driverAge = getConsoleInteger(br)) < 18) {
@@ -29,9 +26,6 @@ public class TestDrive extends ConsoleReader {
 
             System.out.println("Please enter driver's name: ");
             String driverName = getConsoleString(br);
-
-            System.out.println("Please enter driver's gender: ");
-            String driverGender = getConsoleString(br);
 
             System.out.println("Please enter driver's experience: ");
             int driverExperience = getConsoleInteger(br);
@@ -78,8 +72,7 @@ public class TestDrive extends ConsoleReader {
 
                 car = new SportCar(
                         carModel,
-                        carColour,
-                        new Driver(driverAge, driverName, driverGender, driverExperience, haveLicense, driverLicenseNumber),
+                        new Driver(driverAge, driverName, driverExperience, haveLicense, driverLicenseNumber),
                         sportEngine,
                         new Wheel(),
                         speed,
@@ -93,8 +86,7 @@ public class TestDrive extends ConsoleReader {
 
                 car = new Lorry(
                         carModel,
-                        carColour,
-                        new Driver(driverAge, driverName, driverGender, driverExperience, haveLicense, driverLicenseNumber),
+                        new Driver(driverAge, driverName, driverExperience, haveLicense, driverLicenseNumber),
                         regularEngine,
                         new Wheel(),
                         speed,
@@ -108,23 +100,28 @@ public class TestDrive extends ConsoleReader {
 
         if (car != null) {
             String command;
-            car.driver.putCarKey();
-            car.driver.turnCarKey();
+            System.out.println("Enter 'start' to start your car");
+            while (!(command = br.readLine()).equals("start")) {
+                System.out.println("Incorrect command " + command);
+            }
 
             while (true) {
-                System.out.println("Choose command left, right, beep, gas: ");
+
+                System.out.println("Choose command gas, left, right, signal to drive the car or '' to stop");
                 command = br.readLine();
 
-                if (command.equals("left")) {
-                    car.wheel.wheelLeft();
+                if (command.equals("start")) {
+                    car.startCar();
                 } else if (command.equals("right")) {
-                    car.wheel.wheelRight();
-                } else if (command.equals("beep")) {
-                    car.wheel.signal();
+                    car.turnRight();
+                } else if (command.equals("left")) {
+                    car.turnleft();
+                } else if (command.equals("signal")) {
+                    car.signal();
                 } else if (command.equals("gas")) {
                     car.gas();
                 } else if (command.equals("")) {
-                    car.engine.stop();
+                    car.stopCar();
                     break;
                 }
 

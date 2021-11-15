@@ -1,30 +1,30 @@
 package ui.core;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
 
-import static ui.core.BrowserFactory.getWebDriverWait;
+import static ui.core.BrowserFactory.driver;
 
 public class PageElement {
 
     private By by;
-    private String name;
 
-    PageElement(By by) {
+    public PageElement(By by) {
         this.by = by;
     }
 
-    PageElement(By by, String name) {
-        this(by);
-        this.name = name;
-    }
-
     public WebElement findPageElement() {
-        return getWebDriverWait(Duration.ofSeconds(10)).until(ExpectedConditions.presenceOfElementLocated(by));
+        Wait wait = new FluentWait(driver())
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(NoSuchElementException.class)
+                .ignoring(StaleElementReferenceException.class)
+                .ignoring(WebDriverException.class);
+        return (WebElement) wait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
     public void click() {
@@ -38,11 +38,10 @@ public class PageElement {
 
     public boolean isElementPresent() {
         try {
-            getWebDriverWait(Duration.ofSeconds(10)).until(ExpectedConditions.presenceOfElementLocated(by));
+            findPageElement();
             return true;
         } catch (TimeoutException e) {
             return false;
         }
-
     }
 }

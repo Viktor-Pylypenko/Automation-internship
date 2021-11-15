@@ -15,17 +15,11 @@ public class Engine {
     }
 
     void burnGas() {
-        System.out.println("Gas combustion");
+        System.out.println("Gas combustion!");
     }
 
-    void run() {
-        putGas();
-        burnGas();
-        System.out.println("Engine is started!");
-    }
-
-    void stop() {
-        System.out.println("Engine is stopped!");
+    void stopGas() {
+        System.out.println("No gas is supplied to the engine!");
     }
 
 }
@@ -34,32 +28,14 @@ class SportEngine extends Engine {
     SportEngine(int power, double fuelConsumption) {
         super(power, fuelConsumption);
     }
-    @Override
-    void run() {
-        putGas();
-        burnGas();
-        System.out.println(SportEngine.class.getSimpleName() + " is started!");
-    }
 
-    @Override
-    void stop() {
-        System.out.println(SportEngine.class.getSimpleName() + " is stopped!");
+    void nitrogeSupply() {
+        System.out.println("Nitrogen is supplied to the engine! Car rides faster");
     }
 }
 
 class RegularEngine extends Engine {
     RegularEngine(int power, double fuelConsumption) {
         super(power, fuelConsumption);
-    }
-    @Override
-    void run() {
-        putGas();
-        burnGas();
-        System.out.println(RegularEngine.class.getSimpleName() + " is started!");
-    }
-
-    @Override
-    void stop() {
-        System.out.println(RegularEngine.class.getSimpleName() + " is stopped!");
     }
 }

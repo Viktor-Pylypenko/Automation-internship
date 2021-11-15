@@ -2,11 +2,15 @@ package junk;
 
 import org.testng.annotations.Test;
 import ui.core.BrowserFactory;
-import ui.core.Constants;
+import ui.pages.Page;
 
 public class TryBrowser extends BrowserFactory {
+
+    Page page = new Page();
+
     @Test
     public void execute() {
-        driver().get(Constants.UKRSIB_PATH);
+        page.open();
+        page.presenceOfElement();
     }
 }
