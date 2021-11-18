@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.Wait;
 import java.time.Duration;
 
 import static ui.core.BrowserFactory.driver;
+import static ui.core.BrowserFactory.getWebDriverWait;
 
 public class PageElement {
 
@@ -34,6 +35,10 @@ public class PageElement {
     public void type(String text) {
         findPageElement().clear();
         findPageElement().sendKeys(text);
+    }
+
+    public String getNodeText() {
+        return findPageElement().getAttribute("innerText");
     }
 
     public boolean isElementPresent() {

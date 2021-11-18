@@ -2,15 +2,14 @@ package junk;
 
 import org.testng.annotations.Test;
 import ui.core.BrowserFactory;
-import ui.pages.Page;
+import ui.pages.PrivateHome;
 
 public class TryBrowser extends BrowserFactory {
 
-    Page page = new Page();
+    PrivateHome page = new PrivateHome();
 
     @Test
     public void execute() {
-        page.open();
-        page.presenceOfElement();
+
     }
 }

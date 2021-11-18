@@ -15,6 +15,7 @@ public class BrowserFactory {
     @BeforeTest
     public void setUp() {
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
     }
 
     @AfterTest
