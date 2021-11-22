@@ -36,14 +36,13 @@ public class AkinatorTest extends BrowserFactory {
         }
 
         //Akinator Game Page
-        do {
-            if (!akinatorGamePage.loading() && !akinatorGamePage.isPrososalTitleShown()) {
+        while (!akinatorGamePage.isPrososalTitleShown()) {
+            if (!akinatorGamePage.loading()) {
                 try {
-                System.out.print(akinatorGamePage.getQuestionNumber()+". ");
-                System.out.print(akinatorGamePage.getQuestionText() + ": ");
-                System.out.println(akinatorGamePage.getOptionsText());
-                String answer = br.readLine();
-
+                    System.out.print(akinatorGamePage.getQuestionNumber()+". ");
+                    System.out.print(akinatorGamePage.getQuestionText() + ": ");
+                    System.out.println(akinatorGamePage.getOptionsText());
+                    String answer = br.readLine();
                     akinatorGamePage.chooseOption(answer);
                 } catch (org.openqa.selenium.StaleElementReferenceException e) {
                     System.out.print(akinatorGamePage.getQuestionNumber()+". ");
@@ -53,7 +52,7 @@ public class AkinatorTest extends BrowserFactory {
                     akinatorGamePage.chooseOption(answer);
                 }
             }
-        } while (akinatorGamePage.getQuestionNumber() != 26);
+        }
 
         System.out.println(akinatorGamePage.getPropose());
         System.out.println(akinatorGamePage.getProposalTitle());
