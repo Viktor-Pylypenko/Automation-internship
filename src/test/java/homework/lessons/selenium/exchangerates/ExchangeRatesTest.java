@@ -3,19 +3,19 @@ package homework.lessons.selenium.exchangerates;
 import com.google.common.collect.ImmutableMap;
 import org.testng.annotations.Test;
 import ui.core.BrowserFactory;
-import ui.pages.*;
+import ui.pages.banks.*;
 
 import java.util.Map;
 
 import static homework.helpers.BankOperations.*;
 
-public class ExchangeRates extends BrowserFactory {
+public class ExchangeRatesTest extends BrowserFactory {
 
-    PrivateHome privateBank = new PrivateHome();
-    UKRSibHome ukrSibBank = new UKRSibHome();
-    UniversalHome universalBank = new UniversalHome();
-    OschadHome oschadBank = new OschadHome();
-    NBUHome nbu = new NBUHome();
+    PrivateHomePage privateBank = new PrivateHomePage();
+    UKRSibHomePage ukrSibBank = new UKRSibHomePage();
+    UniversalHomePage universalBank = new UniversalHomePage();
+    OschadHomePage oschadBank = new OschadHomePage();
+    NBUHomePage nbu = new NBUHomePage();
 
     @Test
     public void execute() {
@@ -52,7 +52,6 @@ public class ExchangeRates extends BrowserFactory {
             "Universal Bank", universalBR,
             "Oschadbank", oschadBR
         );
-
         lowestBuyingRate(ratesBuying);
 
         Map<String, Double> ratesSelling = ImmutableMap.of(
@@ -63,5 +62,6 @@ public class ExchangeRates extends BrowserFactory {
         );
         highestSellingRate(ratesSelling);
 
+        tearDownDriver();
     }
 }

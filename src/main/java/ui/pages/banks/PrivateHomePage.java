@@ -1,4 +1,4 @@
-package ui.pages;
+package ui.pages.banks;
 
 import org.openqa.selenium.By;
 import ui.core.Constants;
@@ -6,7 +6,7 @@ import ui.core.PageElement;
 
 import static ui.core.BrowserFactory.driver;
 
-public class PrivateHome {
+public class PrivateHomePage {
 
     public PageElement dollarBuyingRate = new PageElement(By.cssSelector(".rates_2g6teezjyl>span:nth-child(1)"));
     public PageElement dollarSellingRate = new PageElement(By.cssSelector(".rates_2g6teezjyl>span:nth-child(3)"));
@@ -16,7 +16,8 @@ public class PrivateHome {
     }
 
     public double getBuyingRate() {
-        return Double.parseDouble(dollarBuyingRate.getNodeText());
+        return Double.parseDouble(
+                dollarBuyingRate.getNodeText());
     }
 
     public double getSellingRate() {

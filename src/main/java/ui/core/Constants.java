@@ -6,4 +6,5 @@ public class Constants {
     public static final String UNIVERSAL_PATH = "https://www.universalbank.com.ua/";
     public static final String OSCHAD_PATH = "http://www.oschadbank.ua/ua/";
     public static final String NBU_PATH = "http://www.bank.gov.ua/";
+    public static final String AKINATOR_PATH = "https://en.akinator.com/";
 }

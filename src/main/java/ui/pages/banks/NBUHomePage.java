@@ -1,4 +1,4 @@
-package ui.pages;
+package ui.pages.banks;
 
 import org.openqa.selenium.By;
 import ui.core.Constants;
@@ -6,7 +6,7 @@ import ui.core.PageElement;
 
 import static ui.core.BrowserFactory.driver;
 
-public class NBUHome {
+public class NBUHomePage {
 
     public PageElement dollarRate = new PageElement(By.cssSelector(".widget-macrovalues div:nth-child(4) .value"));
 

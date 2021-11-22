@@ -1,4 +1,4 @@
-package ui.pages;
+package ui.pages.banks;
 
 import org.openqa.selenium.By;
 import ui.core.Constants;
@@ -6,7 +6,7 @@ import ui.core.PageElement;
 
 import static ui.core.BrowserFactory.driver;
 
-public class UKRSibHome {
+public class UKRSibHomePage {
 
     public PageElement dollarBuyingRate = new PageElement(By.cssSelector("#NALUSD > .rate__buy > p"));
     public PageElement dollarSellingRate = new PageElement(By.cssSelector("#NALUSD > .rate__sale > p"));

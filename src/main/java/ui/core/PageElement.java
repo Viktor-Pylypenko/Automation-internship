@@ -6,9 +6,9 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
+import java.util.List;
 
 import static ui.core.BrowserFactory.driver;
-import static ui.core.BrowserFactory.getWebDriverWait;
 
 public class PageElement {
 
@@ -18,7 +18,7 @@ public class PageElement {
         this.by = by;
     }
 
-    public WebElement findPageElement() {
+    private WebElement findPageElement() {
         Wait wait = new FluentWait(driver())
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofMillis(500))
@@ -26,6 +26,20 @@ public class PageElement {
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(WebDriverException.class);
         return (WebElement) wait.until(ExpectedConditions.presenceOfElementLocated(by));
+    }
+
+    private List<WebElement> findPageElements() {
+        Wait wait = new FluentWait(driver())
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(NoSuchElementException.class)
+                .ignoring(StaleElementReferenceException.class)
+                .ignoring(WebDriverException.class);
+        return (List<WebElement>) wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
+    }
+
+    public void switchToIframe(PageElement pageElement) {
+        driver().switchTo().frame(pageElement.findPageElement());
     }
 
     public void click() {
@@ -41,6 +55,10 @@ public class PageElement {
         return findPageElement().getAttribute("innerText");
     }
 
+    public List<WebElement> getListOfElements() {
+        return findPageElements();
+    }
+
     public boolean isElementPresent() {
         try {
             findPageElement();
@@ -49,4 +67,5 @@ public class PageElement {
             return false;
         }
     }
+
 }

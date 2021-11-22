@@ -2,11 +2,11 @@ package junk;
 
 import org.testng.annotations.Test;
 import ui.core.BrowserFactory;
-import ui.pages.PrivateHome;
+import ui.pages.banks.PrivateHomePage;
 
 public class TryBrowser extends BrowserFactory {
 
-    PrivateHome page = new PrivateHome();
+    PrivateHomePage page = new PrivateHomePage();
 
     @Test
     public void execute() {
