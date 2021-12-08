@@ -11,7 +11,7 @@
     <aspectj.version>1.8.10</aspectj.version>
     <suite>xmls/Testng.xml</suite>
     <buildDirectory>${project.basedir}/target</buildDirectory>
-    <allure.results.directory>${buildDirectory}target/allure-results</allure.results.directory>
+    <allure.results.directory>${buildDirectory}/allure-results</allure.results.directory>
   </properties>
 
   <build>
