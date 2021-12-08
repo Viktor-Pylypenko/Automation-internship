@@ -1,6 +1,9 @@
 package homework.lessons.selenium.exchangerates;
 
 import com.google.common.collect.ImmutableMap;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.annotations.Test;
 import ui.core.BrowserFactory;
 import ui.pages.banks.*;
@@ -9,6 +12,8 @@ import java.util.Map;
 
 import static homework.helpers.BankOperations.*;
 
+@Epic("Regression")
+@Feature("Parser")
 public class ExchangeRatesTest extends BrowserFactory {
 
     PrivateHomePage privateBank = new PrivateHomePage();
@@ -17,6 +22,7 @@ public class ExchangeRatesTest extends BrowserFactory {
     OschadHomePage oschadBank = new OschadHomePage();
     NBUHomePage nbu = new NBUHomePage();
 
+    @Story("Parse buying/selling rates")
     @Test
     public void execute() {
         privateBank.open();
