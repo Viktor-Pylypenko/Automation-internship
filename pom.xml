@@ -10,6 +10,7 @@
   <properties>
     <aspectj.version>1.8.10</aspectj.version>
     <suite>xmls/Testng.xml</suite>
+    <suite>xmls/Trello_API.xml</suite>
     <buildDirectory>${project.basedir}/target</buildDirectory>
     <allure.results.directory>${buildDirectory}/allure-results</allure.results.directory>
   </properties>
@@ -115,6 +116,35 @@
       <artifactId>allure-java-commons</artifactId>
       <version>2.17.0</version>
       <scope>compile</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp</artifactId>
+      <version>4.9.3</version>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.8.5</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit -->
+    <dependency>
+      <groupId>com.squareup.retrofit2</groupId>
+      <artifactId>retrofit</artifactId>
+      <version>2.9.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson -->
+    <dependency>
+      <groupId>com.squareup.retrofit2</groupId>
+      <artifactId>converter-gson</artifactId>
+      <version>2.9.0</version>
     </dependency>
 
   </dependencies>
