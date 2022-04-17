@@ -2,6 +2,6 @@ package junk.test;
 
 public class First {
     public static void main(String[] args) {
-        System.out.printf("ttttttt");
+        System.out.printf("vvvvvvv");
     }
 }
