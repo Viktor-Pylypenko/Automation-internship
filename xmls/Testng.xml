@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Tests" parallel="false">
-    <test name="ExchangeRates">
+    <test name="Smoke">
+        <groups>
+            <run>
+                <include name="smoke" />
+            </run>
+        </groups>
         <classes>
-            <class name="homework.lessons.selenium.exchangerates.ExchangeRatesTest">
-            </class>
+            <class name="junk.TryBrowser"></class>
         </classes>
-    </test>
-    <test name="Comparsion">
-        <classes>
-            <class name="homework.lessons.objmethods.ComparsionObj"></class>
-        </classes>
+
     </test>
 </suite>
