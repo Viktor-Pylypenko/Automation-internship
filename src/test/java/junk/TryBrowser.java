@@ -5,23 +5,33 @@ import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 
 import org.openqa.selenium.support.ui.*;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import ui.core.BrowserFactory;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Stream;
 
 import static java.time.Duration.ofMillis;
 import static java.time.Duration.ofSeconds;
 
 public class TryBrowser extends BrowserFactory {
 
+    @DataProvider
+    public Object[][] giveData() {
+        return new Object[][] {
+                {By.cssSelector("ul > .header-nav__item:nth-child(5) > a"), By.cssSelector("#username")}
+        };
+    }
 
-    By login = By.cssSelector("ul > .header-nav__item:nth-child(5) > a");
-    By usernameInput = By.cssSelector("#username");
+    //By login = By.cssSelector("ul > .header-nav__item:nth-child(5) > a");
+    //By usernameInput = By.cssSelector("#username");
 
-    @Test
-    public void execute() throws InterruptedException {
+    @Test(dataProvider = "giveData", groups = "smoke")
+    public void execute(By login, By usernameInput) throws InterruptedException {
         driver().get("https://airslate.com/");
         finding(login);
         clickOnTheElement(login);
@@ -39,6 +49,19 @@ public class TryBrowser extends BrowserFactory {
 
         tearDownDriver();
     }
+
+    @Test
+    public void a() {
+        System.out.println("AAA");
+        SoftAssert softAssert;
+        Stream s;
+    }
+
+    @Test(groups = "smoke", dependsOnMethods = "a")
+    public void b() {
+        System.out.println("BBB");
+    }
+
 
     public void showCookie(Set<Cookie> cookieSet) {
         for (Cookie cookie : cookieSet) {
