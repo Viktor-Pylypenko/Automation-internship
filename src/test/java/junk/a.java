@@ -7,5 +7,6 @@ public class a {
         System.out.printf("c");
         System.out.printf("d");
         System.out.printf("e");
+        System.out.printf("neew");
     }
 }
