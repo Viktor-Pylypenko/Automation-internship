@@ -6,5 +6,6 @@ public class NewFile {
         System.out.printf("debug");
         System.out.printf("debug1");
         System.out.printf("debug2");
+        System.out.printf("lasat");
     }
 }
