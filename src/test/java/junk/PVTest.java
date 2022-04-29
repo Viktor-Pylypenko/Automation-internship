@@ -1,7 +1,7 @@
 package junk;
 
-public class PVNew {
+public class PVTest {
     public static void main(String[] args) {
-        System.out.println("Wrong commit");
+        System.out.println("pv");
     }
 }
