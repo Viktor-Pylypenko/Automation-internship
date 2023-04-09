@@ -6,12 +6,19 @@ on:
    - master
 
 jobs:
- build:
+ build_my_project:
 
   runs-on: ubuntu-latest
 
   steps:
-  - name: running buld command ...
+  - name: running build command ...
     run : |
      echo "Run lifecycle"
      echo "Build successful"
+ run_post_actions:
+ 
+  runs-on: ubuntu-latest
+  
+  steps:
+  - name: running post actions ...
+    run : echo "Post actions completed succesfully"
