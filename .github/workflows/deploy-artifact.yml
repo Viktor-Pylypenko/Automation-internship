@@ -1,4 +1,6 @@
 name: DeployArtifact
+env:
+ PACKAGE_NAME : "deploy-ver-${{ github.sha }}"
 
 on:
   push:
@@ -18,7 +20,10 @@ jobs:
  run_post_actions:
  
   runs-on: ubuntu-latest
+  needs: [build_my_project]
   
   steps:
   - name: running post actions ...
-    run : echo "Post actions completed succesfully"
+    run : |
+     echo "Post actions completed succesfully"
+     echo "Deployed package ${{ env.PACKAGE_NAME }}"
