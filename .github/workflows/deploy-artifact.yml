@@ -13,6 +13,12 @@ jobs:
   runs-on: ubuntu-latest
 
   steps:
+  - name: clone repository
+    uses: actions/checkout@v3
+    
+  - name: clcheck folder content
+    run: ls -la
+ 
   - name: running build command ...
     run : |
      echo "Run lifecycle"
