@@ -5,16 +5,14 @@
   <groupId>airslate-automation</groupId>
   <artifactId>airslate-automation</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT-v1</version>
+  <version>1.0-SNAPSHOT</version>
 
   <distributionManagement>
     <repository>
-      <id>internal.repo</id>
-      <name>Temporary Staging Repository</name>
-      <url>file://${project.build.directory}/mvn-artifact</url>
+      <id>space-my-maven-repo</id>
+      <url>https://maven.pkg.jetbrains.space/prime-pv/p/main/my-maven-repo</url>
     </repository>
   </distributionManagement>
-
 
   <properties>
     <aspectj.version>1.8.10</aspectj.version>
@@ -178,7 +176,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>3.8.1</version>
+      <version>3.12.0</version>
     </dependency>
 
   </dependencies>
