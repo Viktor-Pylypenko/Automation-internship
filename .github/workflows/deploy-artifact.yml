@@ -1,0 +1,17 @@
+name: DeployArtifact
+
+on:
+  push:
+   branches:
+   - master
+
+jobs:
+ build:
+
+  runs-on: ubuntu-latest
+
+  steps:
+  - name: running buld command ...
+    run : |
+     echo "Run lifecycle"
+     echo "Build successful"
