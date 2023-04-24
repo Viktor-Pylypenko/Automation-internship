@@ -4,7 +4,7 @@ on:
   workflow_run:
     workflows: [Main Action]
     branches: 
-      - updated_version
+      - master
     types:
       - completed
     
