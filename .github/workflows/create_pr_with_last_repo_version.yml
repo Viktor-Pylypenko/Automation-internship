@@ -3,7 +3,8 @@ name: Create PR when package version is updated
 on:
   workflow_run:
     workflows: [Main Action]
-    types: [completed]
+    types:
+      - completed
     
 jobs:
   on-success:
@@ -19,16 +20,19 @@ jobs:
         with:
           java-version: '11'
           
-      - name: pull-request
+      - name: Create new Pull Request
         uses: repo-sync/pull-request@v2
         with:
           destination_branch: "master"
-      
-      - name: Set up JDK 11
-      - run: echo 'The triggering workflow passed'
       
   on-failure:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
       - run: echo 'The triggering workflow failed'
+      
+  on-skip:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'skipped' }}
+    steps:
+      - run: echo 'The triggering workflow skipped'
