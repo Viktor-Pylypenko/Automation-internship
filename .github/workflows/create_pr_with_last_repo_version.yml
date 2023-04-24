@@ -3,8 +3,6 @@ name: Create PR when package version is updated
 on:
   workflow_run:
     workflows: [Main Action]
-    branches: 
-      - master
     types:
       - completed
     
