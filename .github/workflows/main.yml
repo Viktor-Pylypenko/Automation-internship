@@ -6,7 +6,6 @@ on:
     paths: 
       - 'pom.xml'
 
-
 jobs:
   build:
 
@@ -20,8 +19,6 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
-        distribution: 'temurin'
-        cache: maven
         
     - name: Check out a copy of repository in a workflow run
       run: echo "Build completed ..."
