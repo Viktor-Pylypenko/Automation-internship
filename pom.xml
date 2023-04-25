@@ -5,14 +5,21 @@
   <groupId>airslate-automation</groupId>
   <artifactId>airslate-automation</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.3</version>
+  <version>1.0.5</version>
 
   <distributionManagement>
-    <repository>
-      <id>my-artifacts</id>
+    <snapshotRepository>
+      <id>snapshots</id>
       <name>a0npbmbxlrdjj-artifactory-primary-0-snapshots</name>
       <url>https://pvart.jfrog.io/artifactory/libs-snapshot</url>
+    </snapshotRepository>
+
+    <repository>
+      <id>central</id>
+      <name>a0npbmbxlrdjj-artifactory-primary-0-releases</name>
+      <url>https://pvart.jfrog.io/artifactory/libs-release</url>
     </repository>
+
   </distributionManagement>
 
   <properties>
