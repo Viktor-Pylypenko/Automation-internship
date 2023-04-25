@@ -12,6 +12,6 @@ updates:
       interval: "daily
     allow:
       # Allow updates for allure-testng
-      - dependency-name: "io.qameta.allure:allure-testng"
+      - dependency-name: "com.squareup.okhttp3:okhttp"
     reviewers:
       - "Viktor-Pylypenko"
