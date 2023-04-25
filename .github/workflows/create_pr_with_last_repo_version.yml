@@ -24,10 +24,12 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: Update report
-          branch: example-patches
+          add-paths: pom.xml
+          base: master
+          branch: automatic-br
+          commit-message: New commit
           delete-branch: true
-          title: '[Example] Update report'
+          title: '[Example] Automatic pr'
           body: |
             - Update report
             - Updated with *today's* date
