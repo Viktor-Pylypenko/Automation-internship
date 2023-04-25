@@ -5,7 +5,7 @@
   <groupId>airslate-automation</groupId>
   <artifactId>airslate-automation</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT-v13</version>
+  <version>1.0-SNAPSHOT-Test-v1</version>
 
   <distributionManagement>
     <repository>
