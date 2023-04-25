@@ -25,7 +25,6 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           commit-message: Update report
-          author: ${{ github.actor }}
           branch: example-patches
           delete-branch: true
           title: '[Example] Update report'
