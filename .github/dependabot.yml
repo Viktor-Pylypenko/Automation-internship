@@ -4,7 +4,7 @@ updates:
     directory: "/" # Location of package manifests
     target-branch: "master"
     schedule:
-      interval: "daily
+      interval: "daily"
     allow:
       # Allow updates for allure-testng
       - dependency-name: "com.squareup.okhttp3:okhttp"
