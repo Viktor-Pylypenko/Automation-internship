@@ -5,12 +5,13 @@
   <groupId>airslate-automation</groupId>
   <artifactId>airslate-automation</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.0</version>
+  <version>1.0.3</version>
 
   <distributionManagement>
     <repository>
-      <id>space-my-maven-repo</id>
-      <url>https://maven.pkg.jetbrains.space/prime-pv/p/main/my-maven-repo</url>
+      <id>my-artifacts</id>
+      <name>a0npbmbxlrdjj-artifactory-primary-0-snapshots</name>
+      <url>https://pvart.jfrog.io/artifactory/libs-snapshot</url>
     </repository>
   </distributionManagement>
 
