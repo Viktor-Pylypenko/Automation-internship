@@ -26,22 +26,15 @@ jobs:
         export POM=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
         echo ::set-output name=version::$POM
         
-    - name: Cut version using regex
-      uses: actions-ecosystem/action-regex-match@v2
-      id: regex-match
-      with:
-        text: ${{ steps.get_version.outputs.version }}
-        regex: '^\d+\.\d+\.\d+$'
-        
     - name: Check out my other repo
       uses: actions/checkout@main
       with:
-        repository: actions-test-project
+        repository: Viktor-Pylypenko/actions-test-project
         token: ${{secrets.GITHUB_TOKEN}}
         
     - name: Dependabot Notify
       uses: alexanderj1988/dependabot-notify@v1.0.0
       with:
         github-access-token: ${{secrets.GITHUB_TOKEN}}
-        dependency-name: "Viktor-Pylypenko/airslate-automation"
-        dependency-version: "${{ steps.regex-match.outputs.match}}"
+        dependency-name: "airslate-automation/airslate-automation"
+        dependency-version: ${{ steps.get_version.outputs.version }}
