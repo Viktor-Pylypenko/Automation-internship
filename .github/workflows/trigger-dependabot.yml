@@ -43,5 +43,5 @@ jobs:
       uses: alexanderj1988/dependabot-notify@v1.0.0
       with:
         github-access-token: ${{secrets.GITHUB_TOKEN}}
-        dependency-name: "airslate-automation/airslate-automation"
+        dependency-name: "Viktor-Pylypenko/airslate-automation"
         dependency-version: "${{ steps.regex-match.outputs.match}}"
