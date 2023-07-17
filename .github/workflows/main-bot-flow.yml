@@ -54,12 +54,12 @@ jobs:
           AIRSLATE_ADDON_SERVICE_NAME: ${{ env.ADDON_SERVICE }}
           
       - name: Prepare TestPlan
-        run: echo '${{ env.ALLURE_AQL_FILTER }}'
+        run: echo '${{ inputs.ALLURE_AQL_FILTER }}'
         env:
           ALLURE_AQL_FILTER: ${{ steps.allure_filter.outputs.filter_data }}
           
       - name: Print inputs
         run: |
-          echo The AIRSLATE_ENV_URL is ${{ inputs.AIRSLATE_ENV_URL }}
-          echo The VIRTUAL_ENVIRONMENT is ${{ inputs.VIRTUAL_ENVIRONMENT }}
-          echo The ADDON_SERVICE is ${{ inputs.ADDON_SERVICE }}
+          echo "The AIRSLATE_ENV_URL is ${{ inputs.AIRSLATE_ENV_URL }}"
+          echo "The VIRTUAL_ENVIRONMENT is ${{ inputs.VIRTUAL_ENVIRONMENT }}"
+          echo "The ADDON_SERVICE is ${{ inputs.ADDON_SERVICE }}"
