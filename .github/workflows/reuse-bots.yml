@@ -70,7 +70,7 @@ jobs:
       (needs.prepare-vars-workflow-dispatch.result == 'success' || needs.prepare-vars-workflow-dispatch.result == 'skipped') && 
       (needs.prepare-vars-repository-dispatch.result == 'success' || needs.prepare-vars-repository-dispatch.result == 'skipped') && 
       !(needs.prepare-vars-workflow-dispatch.result == 'skipped' && needs.prepare-vars-repository-dispatch.result == 'skipped')
-    uses: ./.github/workflows/maven-publish.yml
+    uses: ./.github/workflows/main-bot-flow.yml
     with:
       AIRSLATE_ENV_URL: ${{needs.prepare-vars.outputs.output1}}
       VIRTUAL_ENVIRONMENT: ${{needs.prepare-vars.outputs.output2}}
