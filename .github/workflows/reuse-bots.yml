@@ -19,7 +19,7 @@ on:
         default: calculate-addon          
 
 jobs:        
-  prepare-vars:
+  prepare-vars-workflow-dispatch:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'workflow_dispatch' }}
     outputs:
@@ -37,8 +37,34 @@ jobs:
       id: step3
       run: echo "ADDON_SERVICE=${{ github.event.inputs.ADDON_SERVICE }}" >> "$GITHUB_OUTPUT"
       
+  prepare-vars-repository-dispatch:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'repository_dispatch' }}
+    outputs:
+        output1: ${{ steps.step1.outputs.AIRSLATE_ENV_URL }}
+        output2: ${{ steps.step2.outputs.VIRTUAL_ENVIRONMENT }}
+        output3: ${{ steps.step3.outputs.ADDON_SERVICE }}
+    steps:
+    - name: step1
+      id: step1
+      run: |
+        case ${{ github.event.client_payload.environment }} in
+          as-stage)
+            echo "AIRSLATE_ENV_URL=https://airslate-stage.xyz" >> $GITHUB_OUTPUT
+            ;;
+            *)
+            echo "AIRSLATE_ENV_URL=https://airslate.com" >> $GITHUB_OUTPUT
+            ;;
+        esac
+    - name: step2  
+      id: step2
+      run: echo "VIRTUAL_ENVIRONMENT=${{ github.event.client_payload.venv }}" >> "$GITHUB_OUTPUT"
+    - name: step2
+      id: step3
+      run: echo "ADDON_SERVICE=${{ github.event.client_payload.service }}" >> "$GITHUB_OUTPUT"
+      
   run-tests:
-    needs: prepare-vars
+    needs: [prepare-vars-workflow-dispatch, prepare-vars-repository-dispatch]
     uses: ./.github/workflows/maven-publish.yml
     with:
       AIRSLATE_ENV_URL: ${{needs.prepare-vars.outputs.output1}}
