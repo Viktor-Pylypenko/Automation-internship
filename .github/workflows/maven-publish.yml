@@ -1,37 +1,12 @@
 name: airSlate Bots tests
 
 on:
-  workflow_dispatch:
-    inputs:
-      AIRSLATE_ENV_URL:
-        type: string
-        description: "Endpoint for tests."
-        required: true
-        default: https://airslate.com
-      VIRTUAL_ENVIRONMENT:
-        type: string
-        description: "Virtual environment."
-        required: false
-      ADDON_SERVICE:
-        type: string
-        description: "Addon service name."
-        default: calculate-addon
-        required: false
-      ALLURE_JOB_RUN_ID:
-        type: string
-        description: "ALLURE_JOB_RUN_ID service parameter. Leave blank."
-        required: false
-      ALLURE_USERNAME:
-        type: string
-        description: "ALLURE_USERNAME service parameter. Leave blank."
-        required: false 
   workflow_call:
     inputs:
       AIRSLATE_ENV_URL:
         type: string
         description: "Endpoint for tests."
         required: true
-        default: https://airslate.com
       VIRTUAL_ENVIRONMENT:
         type: string
         description: "Virtual environment."
@@ -39,7 +14,6 @@ on:
       ADDON_SERVICE:
         type: string
         description: "Addon service name."
-        default: calculate-addon
         required: false
       ALLURE_JOB_RUN_ID:
         type: string
