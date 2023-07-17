@@ -1,0 +1,39 @@
+name: Reuse for concrete bot
+
+on:
+  workflow_dispatch:
+    inputs:
+      AIRSLATE_ENV_URL:
+        type: string
+        description: "Endpoint for tests."
+        required: true
+        default: https://airslate.com
+      VIRTUAL_ENVIRONMENT:
+        type: string
+        description: "Virtual environment."
+        required: false
+      ADDON_SERVICE:
+        type: string
+        description: "Addon service name."
+        required: true
+        default: calculate-addon          
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    
+      - uses: ./.github/workflows/maven-publish.yml
+        with:
+          AIRSLATE_ENV_URL: ${{ env.AIRSLATE_ENV_URL }}
+          VIRTUAL_ENVIRONMENT: ${{ env.VIRTUAL_ENVIRONMENT }}
+          ADDON_SERVICE: ${{ env.ADDON_SERVICE }}
+          
+      - name: Set vars from workflow_dispatch
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          echo "AIRSLATE_ENV_URL=${{ github.event.inputs.AIRSLATE_ENV_URL }}" >> $GITHUB_ENV
+          echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_ENV
+          echo "ADDON_SERVICE=${{ github.event.inputs.ADDON_SERVICE }}" >> $GITHUB_ENV
+          
