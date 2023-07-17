@@ -19,21 +19,21 @@ on:
         default: calculate-addon          
 
 jobs:
-  build:
+  prepare-vars:
     runs-on: ubuntu-latest
-    
     steps:
-    
-      - uses: ./.github/workflows/maven-publish.yml
-        with:
-          AIRSLATE_ENV_URL: ${{ env.AIRSLATE_ENV_URL }}
-          VIRTUAL_ENVIRONMENT: ${{ env.VIRTUAL_ENVIRONMENT }}
-          ADDON_SERVICE: ${{ env.ADDON_SERVICE }}
-          
-      - name: Set vars from workflow_dispatch
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        run: |
-          echo "AIRSLATE_ENV_URL=${{ github.event.inputs.AIRSLATE_ENV_URL }}" >> $GITHUB_ENV
-          echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_ENV
-          echo "ADDON_SERVICE=${{ github.event.inputs.ADDON_SERVICE }}" >> $GITHUB_ENV
+    - name: prepare data
+      if: ${{ github.event_name == 'workflow_dispatch' }}
+      run: |
+        echo "AIRSLATE_ENV_URL=${{ github.event.inputs.AIRSLATE_ENV_URL }}" >> $GITHUB_ENV
+        echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_ENV
+        echo "ADDON_SERVICE=${{ github.event.inputs.ADDON_SERVICE }}" >> $GITHUB_ENV
+      
+  run-tests:
+      uses: ./.github/workflows/maven-publish.yml
+      with:
+        AIRSLATE_ENV_URL: ${{ env.AIRSLATE_ENV_URL }}
+        VIRTUAL_ENVIRONMENT: ${{ env.VIRTUAL_ENVIRONMENT }}
+        ADDON_SERVICE: ${{ env.ADDON_SERVICE }}
+
           
