@@ -54,7 +54,7 @@ jobs:
           AIRSLATE_ADDON_SERVICE_NAME: ${{ inputs.ADDON_SERVICE }}
           
       - name: Prepare TestPlan
-        run: echo '${{ inputs.ALLURE_AQL_FILTER }}'
+        run: echo '${{ env.ALLURE_AQL_FILTER }}'
         env:
           ALLURE_AQL_FILTER: ${{ steps.allure_filter.outputs.filter_data }}
           
