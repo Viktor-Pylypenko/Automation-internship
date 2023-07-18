@@ -2,7 +2,7 @@ name: Reuse for concrete bot
 
 on:
   workflow_dispatch:
-    inputs:
+    inputs: 
       AIRSLATE_ENV_URL:
         type: string
         description: "Endpoint for tests."
@@ -22,47 +22,31 @@ jobs:
   prepare-vars-workflow-dispatch:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'workflow_dispatch' }}
-    outputs:
-        output1: ${{ steps.step1.outputs.AIRSLATE_ENV_URL }}
-        output2: ${{ steps.step2.outputs.VIRTUAL_ENVIRONMENT }}
-        output3: ${{ steps.step3.outputs.ADDON_SERVICE }}
     steps:
-    - name: step1
-      id: step1
-      run: echo "AIRSLATE_ENV_URL=${{ github.event.inputs.AIRSLATE_ENV_URL }}" >> "$GITHUB_OUTPUT"
-    - name: step2  
-      id: step2
-      run: echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> "$GITHUB_OUTPUT"
-    - name: step2
-      id: step3
-      run: echo "ADDON_SERVICE=${{ github.event.inputs.ADDON_SERVICE }}" >> "$GITHUB_OUTPUT"
+    - name: Set vars from workflow_dispatch
+      run: |
+        echo "AIRSLATE_ENV_URL=${{ github.event.inputs.AIRSLATE_ENV_URL }}" >> $GITHUB_ENV
+        echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_ENV
+        echo "ADDON_SERVICE=${{ github.event.inputs.ADDON_SERVICE }}" >> $GITHUB_ENV
       
   prepare-vars-repository-dispatch:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'repository_dispatch' }}
-    outputs:
-        output1: ${{ steps.step1.outputs.AIRSLATE_ENV_URL }}
-        output2: ${{ steps.step2.outputs.VIRTUAL_ENVIRONMENT }}
-        output3: ${{ steps.step3.outputs.ADDON_SERVICE }}
     steps:
-    - name: step1
-      id: step1
+    - name: Set vars from repository_dispatch
       run: |
+        echo "ADDON_SERVICE=${{ github.event.client_payload.service }}" >> $GITHUB_ENV
+        echo "ENV=${{ github.event.client_payload.environment }}" >> $GITHUB_ENV
+        echo "VIRTUAL_ENVIRONMENT=${{ github.event.client_payload.venv }}" >> $GITHUB_ENV
         case ${{ github.event.client_payload.environment }} in
           as-stage)
-            echo "AIRSLATE_ENV_URL=https://airslate-stage.xyz" >> $GITHUB_OUTPUT
+            echo "AIRSLATE_ENV_URL=https://airslate-stage.xyz" >> $GITHUB_ENV
             ;;
-            *)
-            echo "AIRSLATE_ENV_URL=https://airslate.com" >> $GITHUB_OUTPUT
+          *)
+            echo "AIRSLATE_ENV_URL=https://airslate.com" >> $GITHUB_ENV
             ;;
         esac
-    - name: step2  
-      id: step2
-      run: echo "VIRTUAL_ENVIRONMENT=${{ github.event.client_payload.venv }}" >> "$GITHUB_OUTPUT"
-    - name: step2
-      id: step3
-      run: echo "ADDON_SERVICE=${{ github.event.client_payload.service }}" >> "$GITHUB_OUTPUT"
-      
+
   run-tests:
     needs: [prepare-vars-workflow-dispatch, prepare-vars-repository-dispatch]
     if: |
@@ -72,8 +56,6 @@ jobs:
       !(needs.prepare-vars-workflow-dispatch.result == 'skipped' && needs.prepare-vars-repository-dispatch.result == 'skipped')
     uses: ./.github/workflows/main-bot-flow.yml
     with:
-      AIRSLATE_ENV_URL: ${{needs.prepare-vars.outputs.output1}}
-      VIRTUAL_ENVIRONMENT: ${{needs.prepare-vars.outputs.output2}}
-      ADDON_SERVICE: ${{needs.prepare-vars.outputs.output3}}
-
-          
+      AIRSLATE_ENV_URL: ${{env.AIRSLATE_ENV_URL}}
+      VIRTUAL_ENVIRONMENT: ${{env.VIRTUAL_ENVIRONMENT}}
+      ADDON_SERVICE: ${{env.ADDON_SERVICE}}
