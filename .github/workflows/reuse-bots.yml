@@ -36,7 +36,7 @@ jobs:
             echo "ADDON_SERVICE=${{ github.event.client_payload.service }}" >> $GITHUB_OUTPUT
             echo "VIRTUAL_ENVIRONMENT=${{ github.event.client_payload.venv }}" >> $GITHUB_OUTPUT
 
-            if [ ${{ github.event.client_payload.environment }} == "as-stage" ]; then
+            if ${{ github.event.client_payload.environment }} = "as-stage"; then
               echo "AIRSLATE_ENV_URL=https://airslate-stage.xyz" >> $GITHUB_OUTPUT
             else
               echo "AIRSLATE_ENV_URL=https://airslate.com" >> $GITHUB_OUTPUT
