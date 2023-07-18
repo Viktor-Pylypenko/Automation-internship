@@ -31,13 +31,13 @@ jobs:
       id: env
       run: |
         if [ ${{ github.event_name == 'repository_dispatch' }} ]; then
-          case ${{ github.event.client_payload.environment }} in
-           as-stage)
+          case ${{ github.event.client_payload.environment }} in 
+            as-stage)
               echo "AIRSLATE_ENV_URL=https://airslate-stage.xyz" >> $GITHUB_OUTPUT
-            ;;
+              ;;
            *)
               echo "AIRSLATE_ENV_URL=https://airslate.com" >> $GITHUB_OUTPUT
-            ;;
+              ;;
           esac
         else
           echo "AIRSLATE_ENV_URL=${{ github.event.inputs.AIRSLATE_ENV_URL }}" >> $GITHUB_OUTPUT
