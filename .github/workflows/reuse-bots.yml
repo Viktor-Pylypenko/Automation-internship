@@ -22,9 +22,9 @@ jobs:
   prepare-variables:
     runs-on: ubuntu-latest
     outputs:
-        url: ${{ steps.env.outputs.AIRSLATE_ENV_URL }}
-        venv: ${{ steps.addon.outputs.VIRTUAL_ENVIRONMENT }}
-        service: ${{ steps.venv.outputs.ADDON_SERVICE }}
+        url: ${{ steps.vvv.outputs.AIRSLATE_ENV_URL }}
+        service: ${{ steps.vvv.outputs.ADDON_SERVICE }}
+        venv: ${{ steps.vvv.outputs.VIRTUAL_ENVIRONMENT }}
     steps:
     
     - name: test variable
@@ -50,42 +50,6 @@ jobs:
             echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_OUTPUT
             ;; 
         esac
-        
-    - name: Set AIRSLATE_ENV_URL variable
-      id: env
-      run: |
-        if ${{ github.event_name == 'repository_dispatch' }}; then
-          case ${{ github.event.client_payload.environment }} in 
-            as-stage)
-              echo "AIRSLATE_ENV_URL=https://airslate-stage.xyz" >> $GITHUB_OUTPUT
-              ;;
-           *)
-              echo "AIRSLATE_ENV_URL=https://airslate.com" >> $GITHUB_OUTPUT
-              ;;
-          esac
-        else
-          echo "AIRSLATE_ENV_URL=${{ github.event.inputs.AIRSLATE_ENV_URL }}" >> $GITHUB_OUTPUT
-        fi
-      shell: bash
-      
-    - name: Set ADDON_SERVICE variable
-      id: addon
-      run: |
-        if [ ${{ github.event_name == 'repository_dispatch' }} ]; then
-          echo "ADDON_SERVICE=${{ github.event.client_payload.service }}" >> $GITHUB_OUTPUT
-        else
-          echo "ADDON_SERVICE=${{ github.event.inputs.ADDON_SERVICE }}" >> $GITHUB_OUTPUT
-        fi
-      shell: bash
-      
-    - name: Set VIRTUAL_ENVIRONMENT variable
-      id: venv
-      run: |
-        if [ ${{ github.event_name == 'repository_dispatch' }} ]; then
-          echo "VIRTUAL_ENVIRONMENT=${{ github.event.client_payload.venv }}" >> $GITHUB_OUTPUT
-        else
-          echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_OUTPUT
-        fi
       shell: bash
 
   run-tests:
