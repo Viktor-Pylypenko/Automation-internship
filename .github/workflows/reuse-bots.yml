@@ -22,17 +22,16 @@ jobs:
   prepare-variables:
     runs-on: ubuntu-latest
     outputs:
-        url: ${{ steps.vvv.outputs.AIRSLATE_ENV_URL }}
-        service: ${{ steps.vvv.outputs.ADDON_SERVICE }}
-        venv: ${{ steps.vvv.outputs.VIRTUAL_ENVIRONMENT }}
+        url: ${{ steps.vars.outputs.AIRSLATE_ENV_URL }}
+        service: ${{ steps.vars.outputs.ADDON_SERVICE }}
+        venv: ${{ steps.vars.outputs.VIRTUAL_ENVIRONMENT }}
     steps:
     
-    - name: test variable
-      id: vvv
+    - name: Get variables depending on the workflow trigger
+      id: vars
       run: |
         case ${{ github.event_name }} in 
           repository_dispatch)
-            echo "repository_dispatch case"
             echo "ADDON_SERVICE=${{ github.event.client_payload.service }}" >> $GITHUB_OUTPUT
             echo "VIRTUAL_ENVIRONMENT=${{ github.event.client_payload.venv }}" >> $GITHUB_OUTPUT
 
@@ -44,7 +43,6 @@ jobs:
             ;;
 
           workflow_dispatch)
-            echo "workflow_dispatch case"
             echo "AIRSLATE_ENV_URL=${{ github.event.inputs.AIRSLATE_ENV_URL }}" >> $GITHUB_OUTPUT
             echo "ADDON_SERVICE=${{ github.event.inputs.ADDON_SERVICE }}" >> $GITHUB_OUTPUT
             echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_OUTPUT
