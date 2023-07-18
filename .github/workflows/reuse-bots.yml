@@ -27,6 +27,30 @@ jobs:
         service: ${{ steps.venv.outputs.ADDON_SERVICE }}
     steps:
     
+    - name: test variable
+      id: vvv
+      run: |
+        case ${{ github.event_name }} in 
+          repository_dispatch)
+            echo "repository_dispatch case"
+            echo "ADDON_SERVICE=${{ github.event.client_payload.service }}" >> $GITHUB_OUTPUT
+            echo "VIRTUAL_ENVIRONMENT=${{ github.event.client_payload.venv }}" >> $GITHUB_OUTPUT
+
+            if [ ${{ github.event.client_payload.environment }} == "as-stage" ]; then
+              echo "AIRSLATE_ENV_URL=https://airslate-stage.xyz" >> $GITHUB_OUTPUT
+            else
+              echo "AIRSLATE_ENV_URL=https://airslate.com" >> $GITHUB_OUTPUT
+            fi
+            ;;
+
+          workflow_dispatch)
+            echo "workflow_dispatch case"
+            echo "AIRSLATE_ENV_URL=${{ github.event.inputs.AIRSLATE_ENV_URL }}" >> $GITHUB_OUTPUT
+            echo "ADDON_SERVICE=${{ github.event.inputs.ADDON_SERVICE }}" >> $GITHUB_OUTPUT
+            echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_OUTPUT
+            ;; 
+        esac
+        
     - name: Set AIRSLATE_ENV_URL variable
       id: env
       run: |
