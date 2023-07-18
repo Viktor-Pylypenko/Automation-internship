@@ -51,7 +51,7 @@ jobs:
         id: allure_filter
         run: echo ::set-output name=filter_data::'cf["Repo"] = "${{ env.AIRSLATE_ADDON_SERVICE_NAME }}" and status in ["Automated", "In Release"]'
         env:
-          AIRSLATE_ADDON_SERVICE_NAME: ${{ env.ADDON_SERVICE }}
+          AIRSLATE_ADDON_SERVICE_NAME: ${{ inputs.ADDON_SERVICE }}
           
       - name: Prepare TestPlan
         run: echo '${{ inputs.ALLURE_AQL_FILTER }}'
