@@ -56,6 +56,6 @@ jobs:
       !(needs.prepare-vars-workflow-dispatch.result == 'skipped' && needs.prepare-vars-repository-dispatch.result == 'skipped')
     uses: ./.github/workflows/main-bot-flow.yml
     with:
-      AIRSLATE_ENV_URL: ${{env.AIRSLATE_ENV_URL}}
-      VIRTUAL_ENVIRONMENT: ${{env.VIRTUAL_ENVIRONMENT}}
-      ADDON_SERVICE: ${{env.ADDON_SERVICE}}
+      AIRSLATE_ENV_URL: ${{ env.AIRSLATE_ENV_URL }}
+      VIRTUAL_ENVIRONMENT: ${{ env.VIRTUAL_ENVIRONMENT }}
+      ADDON_SERVICE: ${{ env.ADDON_SERVICE }}
