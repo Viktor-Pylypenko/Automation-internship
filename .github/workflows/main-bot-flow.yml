@@ -49,7 +49,7 @@ jobs:
           
       - name: Prepare AQL filter
         id: allure_filter
-        run: echo "filter_data=cf['Repo'] = '${{ env.AIRSLATE_ADDON_SERVICE_NAME }}' and status in ['Automated', 'In Release']" >> $GITHUB_OUTPUT
+        run: echo "filter_data=cf[\"Repo\"] = \"${{ env.AIRSLATE_ADDON_SERVICE_NAME }}\" and status in [\"Automated\", \"In Release\"]" >> $GITHUB_OUTPUT
         env:
           AIRSLATE_ADDON_SERVICE_NAME: ${{ inputs.ADDON_SERVICE }}
           
