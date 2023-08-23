@@ -58,6 +58,10 @@ jobs:
         run: echo '${{ env.ALLURE_AQL_FILTER }}'
         env:
           ALLURE_AQL_FILTER: ${{ steps.allure_filter.outputs.filter_data }}
+
+      - name: Check venv data
+        if: ${{ inputs.AIRSLATE_ENV_URL }} == "default"
+        run: ${{ inputs.AIRSLATE_ENV_URL }} = ""
           
       - name: Print inputs
         run: |
