@@ -17,7 +17,7 @@ on:
       VIRTUAL_ENVIRONMENT:
         description: "Virtual environment."
         required: false
-        default: debug
+        default: default
       ADDON_SERVICE:
         description: "Addon service name."
         required: true
