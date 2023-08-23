@@ -17,10 +17,16 @@ on:
       VIRTUAL_ENVIRONMENT:
         description: "Virtual environment."
         required: false
+        default: debug
       ADDON_SERVICE:
         description: "Addon service name."
         required: true
         default: calculate-addon
+
+env:
+  AIRSLATE_ENV_URL: ${{ inputs.AIRSLATE_ENV_URL }}
+  VIRTUAL_ENVIRONMENT: ${{ inputs.VIRTUAL_ENVIRONMENT }}
+  ADDON_SERVICE: ${{ inputs.ADDON_SERVICE }}
 
 jobs:
   build:
@@ -94,7 +100,7 @@ jobs:
 
       - name: Check venv data
         if: ${{needs.prepare-variables.outputs.url}} == "default"
-        run: ${{ inputs.AIRSLATE_ENV_URL }}=""
+        run: ${{ env.AIRSLATE_ENV_URL }}=""
           
       - name: Print inputs
         run: |
