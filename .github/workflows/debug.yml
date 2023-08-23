@@ -1,0 +1,105 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
+
+name: Debug
+
+on:
+  workflow_dispatch:
+    inputs: 
+      AIRSLATE_ENV_URL:
+        type: choice
+        description: "Endpoint for tests."
+        required: true
+        options: 
+        - https://airslate.com
+        - https://airslate-au.com
+        - https://airslate-stage.xyz
+      VIRTUAL_ENVIRONMENT:
+        description: "Virtual environment."
+        required: false
+      ADDON_SERVICE:
+        description: "Addon service name."
+        required: true
+        default: calculate-addon
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+        
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: 11
+          distribution: 'corretto'
+          
+      - name: Setup Maven
+        uses: stCarolas/setup-maven@v.4.5
+        with:
+          maven-version: 3.8.1
+          
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Get variables depending on the workflow trigger
+        id: vars
+        run: |
+          case ${{ github.event_name }} in 
+            workflow_dispatch)
+              echo "ADDON_SERVICE=${{ github.event.inputs.ADDON_SERVICE }}" >> $GITHUB_OUTPUT
+  
+              if [[ "${{ github.event.inputs.AIRSLATE_ENV_URL }}" == "as-stage" && "${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" == "default" ]]; then
+                echo "AIRSLATE_ENV_URL=https://airslate-stage.xyz" >> $GITHUB_OUTPUT
+                echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_OUTPUT
+              elif [[ "${{ github.event.inputs.AIRSLATE_ENV_URL }}" == "as-stage" ]]; then
+                echo "VIRTUAL_ENVIRONMENT=" >> $GITHUB_OUTPUT
+                echo "AIRSLATE_ENV_URL=https://airslate-stage.xyz" >> $GITHUB_OUTPUT
+              elif [[ "${{ github.event.inputs.AIRSLATE_ENV_URL }}" == "as-prod-au" ]]; then
+                echo "AIRSLATE_ENV_URL=https://airslate-au.com" >> $GITHUB_OUTPUT
+                echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_OUTPUT
+              else
+                echo "AIRSLATE_ENV_URL=https://airslate.com" >> $GITHUB_OUTPUT
+                echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_OUTPUT
+              fi
+              ;;
+  
+          esac
+        shell: bash
+      
+      - name: Print inputs
+        run: |
+          echo "The AIRSLATE_ENV_URL is ${{ needs.prepare-variables.outputs.url }}"
+          echo "The VIRTUAL_ENVIRONMENT is ${{ needs.prepare-variables.outputs.venv }}"
+          echo "The ADDON_SERVICE is ${{ needs.prepare-variables.outputs.service }}"
+
+      - name: Prepare AQL filter
+        id: allure_filter
+        run: echo "filter_data=cf[\"Repo\"] = \"${{ env.AIRSLATE_ADDON_SERVICE_NAME }}\" and status in [\"Automated\", \"In Release\"]" >> $GITHUB_OUTPUT
+        env:
+          AIRSLATE_ADDON_SERVICE_NAME: ${{needs.prepare-variables.outputs.service}}
+          
+      - name: Prepare TestPlan
+        run: echo '${{ env.ALLURE_AQL_FILTER }}'
+        env:
+          ALLURE_AQL_FILTER: ${{ steps.allure_filter.outputs.filter_data }}
+
+      - name: Check venv data
+        if: ${{needs.prepare-variables.outputs.url}} == "default"
+        run: ${{ inputs.AIRSLATE_ENV_URL }}=""
+          
+      - name: Print inputs
+        run: |
+          echo "The AIRSLATE_ENV_URL is ${{ inputs.AIRSLATE_ENV_URL }}"
+          echo "The VIRTUAL_ENVIRONMENT is ${{ inputs.VIRTUAL_ENVIRONMENT }}"
+          echo "The ADDON_SERVICE is ${{ inputs.ADDON_SERVICE }}":
+
+      
