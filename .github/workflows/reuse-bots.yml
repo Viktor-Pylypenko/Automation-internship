@@ -51,6 +51,12 @@ jobs:
 
         esac
       shell: bash
+      
+    - name: Print inputs
+      run: |
+        echo "The AIRSLATE_ENV_URL is ${{ inputs.AIRSLATE_ENV_URL }}"
+        echo "The VIRTUAL_ENVIRONMENT is ${{ inputs.VIRTUAL_ENVIRONMENT }}"
+        echo "The ADDON_SERVICE is ${{ inputs.ADDON_SERVICE }}"
 
   run-tests:
     needs: prepare-variables
