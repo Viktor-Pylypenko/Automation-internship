@@ -64,3 +64,28 @@ jobs:
           echo "The AIRSLATE_ENV_URL is ${{ inputs.AIRSLATE_ENV_URL }}"
           echo "The VIRTUAL_ENVIRONMENT is ${{ inputs.VIRTUAL_ENVIRONMENT }}"
           echo "The ADDON_SERVICE is ${{ inputs.ADDON_SERVICE }}"
+
+      - name: Get variables depending on the workflow trigger
+        id: vars
+        run: |
+          case ${{ github.event_name }} in 
+            workflow_dispatch)
+              echo "ADDON_SERVICE=${{ github.event.client_payload.service }}" >> $GITHUB_OUTPUT
+  
+              if [[ "${{ github.event.client_payload.environment }}" == "as-stage" ]]; then
+                echo "AIRSLATE_ENV_URL=https://airslate-stage.xyz" >> $GITHUB_OUTPUT
+                echo "VIRTUAL_ENVIRONMENT=${{ github.event.client_payload.venv }}" >> $GITHUB_OUTPUT
+              elif [[ "${{ github.event.client_payload.environment }}" == "as-stage" && "${{ github.event.client_payload.venv }}" == "default" ]]; then
+                echo "VIRTUAL_ENVIRONMENT=" >> $GITHUB_OUTPUT
+                echo "AIRSLATE_ENV_URL=https://airslate-au.com" >> $GITHUB_OUTPUT
+              elif [[ "${{ github.event.client_payload.environment }}" == "as-prod-au" ]]; then
+                echo "AIRSLATE_ENV_URL=https://airslate-au.com" >> $GITHUB_OUTPUT
+                echo "VIRTUAL_ENVIRONMENT=${{ github.event.client_payload.venv }}" >> $GITHUB_OUTPUT
+              else
+                echo "AIRSLATE_ENV_URL=https://airslate.com" >> $GITHUB_OUTPUT
+                echo "VIRTUAL_ENVIRONMENT=${{ github.event.client_payload.venv }}" >> $GITHUB_OUTPUT
+              fi
+              ;;
+  
+          esac
+        shell: bash
