@@ -22,6 +22,10 @@ on:
         description: "Addon service name."
         required: true
         default: calculate-addon
+      ENV_SHORT:
+        description: "Endpoint for tests."
+        required: true
+        default: as-stage
 
 env:
   AIRSLATE_ENV_URL: ${{ inputs.AIRSLATE_ENV_URL }}
@@ -63,13 +67,13 @@ jobs:
             workflow_dispatch)
               echo "ADDON_SERVICE=${{ github.event.inputs.ADDON_SERVICE }}" >> $GITHUB_OUTPUT
   
-              if [[ "${{ github.event.inputs.AIRSLATE_ENV_URL }}" == "as-stage" && "${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" == "default" ]]; then
+              if [[ "${{ github.event.inputs.ENV_SHORT }}" == "as-stage" && "${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" == "default" ]]; then
                 echo "AIRSLATE_ENV_URL=https://airslate-stage.xyz" >> $GITHUB_OUTPUT
                 echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_OUTPUT
-              elif [[ "${{ github.event.inputs.AIRSLATE_ENV_URL }}" == "as-stage" ]]; then
+              elif [[ "${{ github.event.inputs.ENV_SHORT }}" == "as-stage" ]]; then
                 echo "VIRTUAL_ENVIRONMENT=" >> $GITHUB_OUTPUT
                 echo "AIRSLATE_ENV_URL=https://airslate-stage.xyz" >> $GITHUB_OUTPUT
-              elif [[ "${{ github.event.inputs.AIRSLATE_ENV_URL }}" == "as-prod-au" ]]; then
+              elif [[ "${{ github.event.inputs.ENV_SHORT }}" == "as-prod-au" ]]; then
                 echo "AIRSLATE_ENV_URL=https://airslate-au.com" >> $GITHUB_OUTPUT
                 echo "VIRTUAL_ENVIRONMENT=${{ github.event.inputs.VIRTUAL_ENVIRONMENT }}" >> $GITHUB_OUTPUT
               else
