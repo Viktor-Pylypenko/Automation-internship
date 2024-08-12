@@ -10,14 +10,13 @@ import java.io.IOException;
 import java.util.Objects;
 import java.util.Properties;
 
-
 public class TestFile {
 
     private static Logger logger = LoggerFactory.getLogger(TestFile.class);
 
-    public static final String BASE_URL_PROD = "https://abtest.infrateam.xyz/";
-    public static final String BASE_URL_RC_HF = "https://abtest.infrateam-rc.xyz/";
-    public static final String BASE_URL_DEV = "https://abtest.infrateam-dev.xyz/";
+    public static final String BASE_URL_PROD = "https://google.com/";
+    public static final String BASE_URL_RC_HF = "https://google.com/";
+    public static final String BASE_URL_DEV = "https://google.com/";
 
     private String url;
 
