@@ -1,7 +1,7 @@
 package exmple;
 
-public class Feature2 {
+public class FeatureOne {
     public static void main(String[] args) {
-        System.out.println("Feature2");
+        System.out.println("Feature One");
     }
 }
