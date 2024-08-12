@@ -1,7 +1,7 @@
-package api.trello.services;
+package com.thirdparty.trello.services;
 
-import api.trello.models.Board;
-import api.trello.models.Lists;
+import com.thirdparty.trello.models.Board;
+import com.thirdparty.trello.models.Lists;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.POST;

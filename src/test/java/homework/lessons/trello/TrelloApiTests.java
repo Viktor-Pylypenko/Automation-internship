@@ -1,8 +1,8 @@
 package homework.lessons.trello;
 
-import api.trello.TrelloRestClient;
-import api.trello.models.Board;
-import api.trello.models.Lists;
+import com.thirdparty.trello.TrelloRestClient;
+import com.thirdparty.trello.models.Board;
+import com.thirdparty.trello.models.Lists;
 import org.testng.annotations.Test;
 
 import java.io.IOException;

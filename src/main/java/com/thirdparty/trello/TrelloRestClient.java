@@ -1,7 +1,7 @@
-package api.trello;
+package com.thirdparty.trello;
 
-import api.trello.interceptors.TrelloAuthInterceptor;
-import api.trello.services.BoardService;
+import com.thirdparty.trello.interceptors.TrelloAuthInterceptor;
+import com.thirdparty.trello.services.BoardService;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

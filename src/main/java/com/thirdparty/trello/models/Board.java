@@ -1,4 +1,4 @@
-package api.trello.models;
+package com.thirdparty.trello.models;
 
 public class Board {
     public String id;

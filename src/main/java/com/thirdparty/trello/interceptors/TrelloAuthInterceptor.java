@@ -1,4 +1,4 @@
-package api.trello.interceptors;
+package com.thirdparty.trello.interceptors;
 
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
